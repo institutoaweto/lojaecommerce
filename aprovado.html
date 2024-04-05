@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="shortcut icon" href="img/aweto.png">
+        <link rel="stylesheet" media="screen and (max-width:700px)" href="styleCSS/mob/aprovadomob.css">
+        <link rel="stylesheet" href="styleCSS/header.css">
+        <link rel="stylesheet" href="styleCSS/aprovado.css">
+        <link rel="stylesheet" href="styleCSS/footer.css">
+        <title>Loja Aweto</title>
+    </head>
+<body>
+<style>
+        @media (max-width:700px){
+        #nav-icone-menu,
+        .fundo-texto-menu,.fundo-clase,.fundo-menu,.fundo-lupa,#input-lupa,.caminho-mobile,#listamob,#fechar-busca{
+                display: flex;
+        }
+        body,html{
+            padding: 0px;
+            margin:0px;
+            width:100%;
+           overflow-x: hidden;
+        }
+        #logo{
+        transform: translateX(50px) translateY(10px) scale(0.9); 
+        }
+    }
+
+     
+</style>
+
+    <header class="headermob"> </header>
+
+    <div class="produto-detalhes" id="produto-detalhes">
+
+        <form action="https://formspree.io/f/xwkgrorw" id="form-compra" class="form-compra" method="POST">
+           
+            <label id="cadastro">Faça Seu Cadastro !</label>
+            <label id="cadastro-sub">Acompanhe todo o Processo de Entrega do seu Ebook pelo seu Email</label>
+
+            <input type="text" name="Nome" placeholder="Nome"  id="dados-input"  class="dados-input" required>
+            <input type="email" name="Email"placeholder="Email" id="dados-input"  class="dados-input"  required>
+            <input type="text" name="Telefone" placeholder="Telefone"  id="dados-input" class="dados-input"  required>
+            <input type="hidden" name="_next" value="" class="link-pagamento" id="input-valor" class="dados-input" >
+            <input type="hidden" name="_subject" value="Nova Venda! Aguardando Confirmação Do Pagamento">
+            <textarea name="Pedido" id="meuproduto" ></textarea>
+            <textarea name="Valor" id="meupreco" ></textarea>
+            <button type="submit" id="btn-enviar" class="btn-enviar">Enviar</button>
+        
+        </form>
+
+        <div class="esconder" id="esconder">
+        <img class="imagem-produto" id="imagem-produto" src="" alt="Produto"> <!--imagem-->
+        <span class="product-name" id="product-name"></span><!--titulo-->
+        <span class="product-price" id="produto-preço"></span><!--preço-->
+        <span class="produto-comprar" id="produto-comprar"> Fazer o Pagamento</span>
+        </div>
+
+        <div class="tutorial" id="tutorial">
+            <h2 id="titulo-tutorial">Tire suas Duvidas</h2>
+
+            <div id="passos" class="passos">
+                <p id="nomepasso">Passo 1 : Preencha o Formulário</p>
+
+                <img src="passo1.JPG" class="img-passo" id="img-passo" alt="">
+            
+                <p id="informaçao-passo" class="informaçao-passo"> 
+                    Preencha o Formulário com  Nome Legivel  e Email para que possamos enviar o Ebook .
+                    <br><br>
+                    Não se esqueça de adicionar um número de contato para caso ocorrer algum problema com o processo de envio do seu Ebook
+                    <br><br>
+                    <font size="4" color="#0794d3">Se estiver com dúvidas, fale com a gente através desse Número<br>(11) 9 9999-9999 </font>
+                </p>
+
+            </div>
+
+            <div id="passos" class="passos">
+                <p id="nomepasso">Passo 2 : Faça o Pagamento </p>
+
+                <img src="confirm.JPG" id="img-passo" class="img-passo" alt="">
+
+                <p id="informaçao-passo" class="informaçao-passo"> 
+                    Confirmar o Envio Clicando em "Go Back"
+                    <br><br>
+                   Seu Pagamento estará disponivel para ser Feito 
+                    <br><br>
+                    <font size="4" color="#0794d3">Se estiver com dúvidas, fale com a gente através desse Número<br>(11) 9 9999-9999 </font>
+                </p>
+
+            </div>
+
+            <div id="passos" class="passos">
+                <p id="nomepasso">Passo 3 : Faça o Pagamento </p>
+
+                <img src="pagamento.JPG" id="img-passo" class="img-passo" alt="">
+
+                <p id="informaçao-passo" class="informaçao-passo"> 
+                    Feito todos os Passos, basta clicar em Pagamento e escolher a forma que deseja Pagar
+                    <br><br>
+                   O ebook Vai ser enviado para o seu E-mail após Aprovação do pagamento
+                    <br><br>
+                    <font size="4" color="#0794d3">Se estiver com dúvidas, fale com a gente através desse Número<br>(11) 9 9999-9999 </font>
+                </p>
+
+            </div>
+          
+        </div>
+    </div>
+
+    <script>
+
+    let fazerpagamento = document.getElementById('produto-comprar')
+
+    fazerpagamento.addEventListener('click', function(){
+    window.location = pagamento;
+});
+    
+    </script>
+
+<script src="scriptJS/aprovado.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.fundo-produtos{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:40px;
+    transform: translateY(50px);
+    z-index: 2;
+}
+.bloco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:230px;
+    height:445px;
+    border: 1px solid #00000059;
+    padding:14px;
+    margin: 8px;  
+    z-index: 3;
+    margin-top: 50px;
+}
+.img-fundo{
+    width: 210px;
+    height: 260px;
+    padding: 10px;
+    filter: drop-shadow(8px 0 8px #00000059)
+}
+#produto-titulo{
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-weight: normal;
+    padding: 8px;
+    text-transform: capitalize;
+}
+#desconto-produto{
+    transform: translateY(-35px) translateX(-22px);
+    font-size: 16px;
+    width: 80px;
+}
+#produto-preço{
+    font-size: 25px;
+    font-weight: bold;
+    color:#0794d3;
+    transform: translateY(-40px);
+}
+#botao-compra{
+    width:190px;
+    height:40px;
+    background-color: #0794d3;
+    font-size: 19px;
+    border:2px solid #0794d3;
+    border-right:none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-48px);
+    padding: 10px;
+}
+#botao-compra:hover{
+    background-color:#0c212d;
+}
+
+.fundo-carrossel-unico{
+display: flex;
+background-color: red;
+transform: translateY(50px);
+}

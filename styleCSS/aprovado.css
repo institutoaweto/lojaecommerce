@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.produto-detalhes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    transform: translateY(100px);
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 49%;
+    height: 600px;
+    border-right: 1px solid black;
+
+}
+.fundo-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #0c212d;
+    width: 49%;
+    height: 80%;
+}
+#dados-input{
+    font-size: 17px;
+    border: 2px solid #0c212d;
+    margin-top: 40px;
+    padding: 8px;
+    width: 50%;
+    color: black;
+}
+#cadastro,#cadastro-sub{
+    margin-top:0px;
+}
+#cadastro{
+    font-size: 28px;
+    padding: 10px;
+    font-weight: bold;
+    color:#0c212d;
+}
+#cadastro-sub{
+    font-size: 20px;
+    margin: 0;
+    color: #0c212d;
+    padding: 10px;
+}
+#btn-enviar{
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    width: 20%;
+    background-color: #0c212d;
+    color: white;
+    border: 0;
+}
+#btn-enviar:hover{
+    background-color: #0794d3;
+}
+#total,#totalpreco{
+display: none;
+}
+
+.esconder{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+flex-wrap: wrap;
+width: 50%;
+
+}
+.imagem-produto{
+    width: 350px;
+    height: 350px;
+}
+.product-name{
+    font-weight: bold;
+    font-size: 30px;
+}
+.product-price{
+    font-size: 30px;
+}
+.produto-comprar{
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #0c212d;
+    color: white;
+    border: 0;
+}
+.produto-comprar:hover{
+    background-color: #0794d3;
+}
+.tutorial{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    transform: translateY(20px);
+}
+#titulo-tutorial{
+    font-size: 30px;
+    border-bottom: 5px solid #0c212d;
+    font-weight: normal;
+}
+#passos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 2px solid #0794d3;
+}
+#nomepasso{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 29px;
+    width: 100%;
+    color: #0794d3;
+}
+#img-passo{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 50%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#informaçao-passo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: normal;
+    justify-content: center;
+    width: 40%;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 25px;
+}
+textarea{
+    display: none;
+}

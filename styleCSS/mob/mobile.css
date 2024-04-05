@@ -1,0 +1,834 @@
+@media (max-width:700px){
+    /*DESATIVAR PARA MOBILE*/
+    #texto-nav,
+    #redes,.fundo-img-catalogo,.botao-catalogo,.fundo,.lupa,.pesquisa,
+    .fechar,#input-pesquisa,.fundo:hover,.prev, .next, .caminhos,
+    .fundo-anuncioebooks,.caminhos,.fundo-anuncioebooks,
+    .botao-catalogo,.lupa-pesquisa,#input-pesquisa,#lista{
+        display: none;
+        transition: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+
+/*****************************************GERAL********************************************************
+**************************************************************************************************
+**************************************************************************************************/
+
+
+/*CONFIGURAÇÕES DO CORPO E GERAL*/
+    html,body,main,section,.footer{
+    width: 100%;
+    }
+    header{
+    display: flex;
+    z-index: 0;
+    width: 100%;
+    }
+
+    /*CABEÇALHO*/
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 120px;
+    }
+  
+    /*ICONE MENU*/
+    .headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+      
+    }
+    .menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px ;
+    }
+
+    .ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+    
+    }
+
+    #nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+      
+    }
+
+  
+
+    .fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+    }
+    .menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    
+    /*LOGOTIPO*/
+  
+    .logomob{
+        margin-top: -8px;
+        margin-left: 200px;
+        transform: scale(0.6);
+        padding: 5px;
+    }
+   
+    /*CONFIGURAÇÃO DA LUPA MOBILE*/
+    .config-lupa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color:#0c212d;
+        width: 100%;
+        padding:9px;
+        color: #0c212d;
+        transform: translateY(-40px);
+    }
+    .fundo-lupa{
+        display: flex;
+        justify-content: left;
+        background-color: white;
+        width: 75%;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 6px;
+        color: #0c212d; 
+        height: 30px;           
+    }
+    #input-lupa{
+        padding:5px;
+        margin-left:10px; 
+        color: #0c212d;
+        width: 90%;   
+        font-size: 20px; 
+    }
+    /*lista da lupa*/
+    #lupamob{
+        font-size: 25px;
+        color: #02141c;
+        background-color: white;
+        padding:2px;
+        font-weight: bold;
+        transform: translateY(-7px);
+    }
+    #listamob{
+        display: none;
+        transform: translateY(-490px) translateX(10px);
+        position: fixed;
+        width: 100%;
+    }
+    .ativo-listamob{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+        height: 500px;
+        background-color: white;
+        margin-top:1540px; 
+        margin-left:10px;     
+    }
+    #fechar-busca{
+        font-size: 35px;
+        color: #ff9b00;
+        padding: 1px;
+        transform: translateX(15px);
+    }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*****************************************CORPO********************************************************
+**************************************************************************************************
+**************************************************************************************************/
+
+    /*CARROSSEL*/
+    .fundo-carrossel, .mySlides{
+        transform: translateY(45px);
+        z-index: 1;
+    }
+
+    /*CAMINHOS*/
+   #titulo-ebooks{
+    margin-top:-5px;
+    margin-left:10px;
+    width: 300px;
+    color: white;
+    font-size: 20px;
+   }
+   .caminho-mobile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(525px);
+    width: 100%;
+    height: 500px;
+    background-color:#0c212d;
+   }
+   .anuncio1{
+    display: flex;
+    align-items: left;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #0c212d;
+    border: 3px solid #ff9b00; 
+    width: 90%;
+    height: 100px;
+    margin-top:15px;
+    padding: 10px;
+   }
+   #titulo-ebooksmob{
+    margin-left: -45px;
+    transform: translateX(40px) translateY(-5px);
+    width:90%;
+    color: white;
+    font-size: 16px;
+   }
+   #texto-ebooksmob{
+    transform: translateY(-20px) translateX(10px);
+    font-size: 13px;
+    width: 100%;
+    font-weight: bold;
+    color: #ff9b00;
+   }
+
+
+  /*DESCONTO DOIS*/
+
+    #descontodoismob{
+    transform: translateY(640px);
+    }
+
+   /*LIVROS CATEGORIAS*/
+
+    #categoria-produto{
+    transform: translateY(780px) scale(1.2) translateX(10px) ;
+    margin: 0px;
+    }
+
+    #fundo-produtosmob{
+    display: flex;
+    padding: 0;
+    transform: translateY(850px);
+    }
+
+    /*BLOCO PRODUTOS*/
+    #bloco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 450px;
+    margin: 0;
+    transform: translateY(-140px);
+    background-color: white;
+    border-radius: 0px;
+    padding: -4px;
+    margin-top:60px;
+
+    }
+
+    #titulo-produto{
+    transform: translateY(-20px);
+    }
+
+    #desconto-produto{
+    display: none;
+    }
+
+    #preço-produto{
+    margin-top: 35px;
+    }
+
+    #botao-compra{
+   margin-top: -15px;
+    }
+
+    .botao-carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:40px;
+    min-width: 141px;
+    margin:11px;
+    }
+
+
+/*****************************************FINAL********************************************************
+**************************************************************************************************
+**************************************************************************************************/
+
+    /*VEJA MAIS*/
+
+    #fundo-veja{
+    display: flex;
+    background-color: #0794d3;
+    transform: translateX(10px) translateY(-100px) scale(0.9);
+    width: 40%;
+    }
+
+    #fundo-veja:hover{
+    background-color: #0c212d;
+    }
+    
+    /*FINAL*/
+
+    .footer{
+    background-color: #02141c;
+    transform: translateY(800px);
+    height: 1000px;
+    width: 100%;
+    }
+
+    /*Dados Empresariais*/
+
+    #fundo-texto{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+    }
+
+    #infor-final{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    }
+
+    #logo-redes{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    transform: translateY(250px) translateX(-125px);
+    }
+
+}
+
+@media (max-width:392px){
+
+    .headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+      
+    }
+    .menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px ;
+    }
+
+    .ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+    
+    }
+
+    #nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+      
+    }
+
+  
+
+    .fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+    }
+    .menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+
+
+  
+
+    .config-lupa{
+        font-size: 17px;
+    }
+   
+    #bloco{
+        width: 160px;
+    }
+
+}
+
+@media (max-width:380px){
+
+    .headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+      
+    }
+    .menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px ;
+    }
+
+    .ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+    
+    }
+
+    #nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+      
+    }
+
+  
+
+    .fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+    }
+    .menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+
+    .logomob{
+        margin-top: -8px;
+        margin-left: 200px;
+        transform: scale(0.6);
+        padding: 5px;
+    }
+
+    #ircarrinho,.fundo-carrinho,#nav-carrinho{
+        transform: translateX(20px) translateY(-3px)  scale(1.0);
+    }
+
+    .config-lupa{
+        font-size: 17px;
+    }
+    
+
+    #bloco{
+        width: 140px;
+        margin-left: 12px;
+    }
+}
+
+@media (max-width:365px){
+
+    .headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+      
+    }
+    .menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px ;
+    }
+
+    .ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+    
+    }
+
+    #nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+      
+    }
+
+  
+
+    .fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+    }
+    .menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .logomob{
+        margin-top: -8px;
+        margin-left: 200px;
+        transform: scale(0.6);
+        padding: 5px;
+    }
+
+    #ircarrinho,.fundo-carrinho,#nav-carrinho{
+        transform: translateX(20px) translateY(-3px)  scale(1.0);
+    }
+
+    .config-lupa{
+        font-size: 17px;
+    }
+ 
+
+    #bloco{
+        width: 135px;
+        margin-left: 2px;
+    }
+}
+
+@media (max-width:335px){
+
+    .headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+      
+    }
+    .menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px ;
+    }
+
+    .ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+    
+    }
+
+    #nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+      
+    }
+
+  
+
+    .fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+    }
+    .menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .logomob{
+        margin-top: -8px;
+        margin-left: 200px;
+        transform: scale(0.6);
+        padding: 5px;
+    }
+
+    #ircarrinho,.fundo-carrinho,#nav-carrinho{
+        transform: translateX(20px) translateY(-3px)  scale(1.0);
+    }
+
+    .config-lupa{
+        font-size: 17px;
+    }
+
+
+    #bloco{
+        width: 125px;
+    }
+}

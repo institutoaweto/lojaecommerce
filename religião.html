@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="img/aweto.png">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="styleCSS/mob/mobile.css">
+    <link rel="stylesheet" href="styleCSS/header.css">
+    <link rel="stylesheet" href="styleCSS/main.css">
+    <link rel="stylesheet" href="styleCSS/produtos.css">
+    <link rel="stylesheet" href="styleCSS/footer.css">
+    <title>Loja Aweto</title>
+</head>
+<body>
+<!--ATIVAR PARA MOBILE-->
+<style>
+    @media (max-width:700px){
+    #nav-icone-menu,
+    .fundo-texto-menu,.fundo-clase,.fundo-menu,.fundo-lupa,#input-lupa,.caminho-mobile,#listamob,#fechar-busca{
+            display: flex;
+    }
+    body,html{
+        padding: 0px;
+        margin:0px;
+        width:100%;
+       overflow-x: hidden;
+    }
+    #logo{
+    transform: translateX(50px) translateY(10px) scale(0.9); 
+    }
+}
+
+ 
+</style>
+
+
+<header class="headermob">
+
+    <!--Menu mob-->
+    <div class="fundo-menu" >
+
+        <i class="bi bi-list" id="nav-icone-menu"></i>
+        
+        <div class="fechar-menu">
+        <i class="bi bi-x-circle"></i>
+        </div>
+
+         <div class="fundo-texto-menu">
+            <a href="index.html" class="menu-texto">Início</a>
+            <a href="religião.html" class="menu-texto">Religião</a>
+            <a href="autoajuda.html" class="menu-texto">Auto Ajuda</a>
+            <a href="gratuitos.html" class="menu-texto">Gratuitos</a>
+            <a href="todos.html" class="menu-texto">Todos</a> 
+         </div>
+
+
+    </div>
+
+    <!--Logotipo-->
+    <a href="index.html">
+    <img src="https://i.postimg.cc/8s8LnN55/aweto.png" id="logo" class="logomob">
+    </a>
+
+    <!--Navegação-->
+    <nav>
+        <a href="religião.html"><p id="texto-nav" class="clique-menu1">Religião</p></a>
+        <a href="autoajuda.html"><p id="texto-nav" class="clique-menu2">Auto Ajuda</p></a>
+        <a href="gratuitos.html"><p id="texto-nav" class="clique-menu3">Gratuitos</p></a>
+        <a href="todos.html"><p id="texto-nav" class="clique-menu4">Todos</p> </a>
+        <a href=""><p id="texto-nav" class="clique-menu5"></p> </a>
+        <a href=""><p id="texto-nav" class="clique-menu6"></p> </a>
+    </nav>
+
+    <!--lupa-->
+    <div class="fundo">
+        <div class="lupa">
+            <i class="bi bi-search"></i>
+        </div>
+
+        <div class="pesquisa" >
+
+            <input type="text" name="" id="input-pesquisa" placeholder="O que procura">
+           
+            <!--Categoria oficial-->
+            <ul class="lupa-pesquisa" id="lista">
+
+                <a href="religião.html"><li class="dados-lupa" id="lista1">Religião</li></a>
+
+                <a href="autoajuda.html"><li class="dados-lupa" id="lista1">Auto Ajuda</li></a>
+
+                <a href="gratuitos.html"><li class="dados-lupa">Gratuitos</li></a>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '151 Páginas',
+                    'Sem restrição de Idade',
+                    'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
+                    'https://mpago.la/2xDZikZ'
+                    )" >
+                    <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+                Livro : Maravilhas da Magia Cigana Livro 1</li>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                        'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
+                        '49,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '185 Páginas',
+                        'Sem restrição de Idade',
+                        'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
+                        'https://mpago.la/2KhowgS'
+                        )">
+                         <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+                Livro : Maravilhas da Magia Cigana Livro 2</li>
+    
+                <li class="dados-lupa"  onclick="adicionarProduto(
+                        'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
+                        '49,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/JzMp15rh/maravilha3.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '164 Páginas',
+                        'Sem restrição de Idade',
+                        'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
+                        'https://mpago.la/1iSY21W'
+                         )">
+                <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+                Livro : Maravilhas da Magia Cigana Livro 3</li>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                        'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
+                        '49,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '164 Páginas',
+                        'Sem restrição de Idade',
+                        'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
+                        'https://mpago.la/34fdVnT',
+                )">
+                <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+                Livro : Maravilhas da Magia Cigana Livro 4</li>
+
+                <li class="dados-lupa"   onclick="adicionarProduto(
+                        'Maravilha Da Magia Cigana Livro 5', /*nome do produto  - produto.nome*/
+                        '49,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/tgmkN0h1/maravilha5.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '181 Páginas',
+                        'Sem restrição de Idade',
+                        'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
+                        'https://mpago.la/2oXF1p3',
+                )">
+                 <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" id="img-lupa-dados"  alt="">
+                Livro : Maravilhas da Magia Cigana Livro 5</li>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                   'Maravilha Da Magia Cigana Livro 6', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/x15tqN83/maravilha6.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '173 Páginas',
+                    'Sem restrição de Idade',
+                    'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
+                    'https://mpago.la/1Hdexfm'
+                    )">
+                    <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" id="img-lupa-dados" alt="">
+                Livro : Maravilhas da Magia Cigana Livro 6</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                'As Três Marias - Padilha , Mulambo e Quitéria', /*nome do produto  - produto.nome*/
+                '39,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '189 Páginas',
+                'Sem restrição de Idade',
+                'Cada vez que eu me envolvo com entidades espirituais eu me encontro mais enquanto pessoa. Entender como seres etéreos agem me traz a certeza da finitude humana, e da infinitude do espírito. Nada somos diante de uma vida tão frágil. Nada podemos diante da grandeza da essência espiritual. Saber que existe uma dimensão paralela à nossa com seres poderosos a nos circundar nos causa um certo pavor, mas por outro lado a segurança de saber que não estamos sozinhos. Que sim, existem seres poderosos que nos cuidam, nos vigiam, mas também nos castiga. E nos castiga com a parcimônia que o tempo não nos dá. Como Maria Quitéria fez, esperando vinte e cinco anos para cumprir a sua promessa. Para nós uma vida, para ela um piscar de olhos em sua essência.',
+                'https://mpago.la/2jzKUwz'
+                )">
+                 <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" id="img-lupa-dados" alt="">
+                Livro : As Três Marias</li>
+ 
+                <li class="dados-lupa" onclick="adicionarProduto(
+                'Kizomba - Cosmogonia Bantu', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '163 Páginas',
+                'Sem restrição de Idade',
+                'Foi com grande satisfação que recebi o convite para prefaciar esta obra, destacando o autor Zezinho França., também sacerdote Tata Zezinho França de Kabilah, (Tawá-Laewsi) como um dos maiores estudiosos na cultura Bantu da atualidade, o mesmo conseguiu em sua obra inserir informações valiosas para a aprendizagem e conhecimento não somente para os praticantes e simpatizantes das religiões de cultura afrodescendentes, mas também como fonte de entendimento e estudo para outras nações, religiões e pessoas em geral.',
+                'https://mpago.la/2uW1Z38'
+                )">
+                 <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" id="img-lupa-dados" alt="">
+                Livro : Kizomba - Cosmogonia Bantu</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                        'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
+                        '49,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '113 Páginas',
+                        'Sem restrição de Idade',
+                        'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
+                        'https://mpago.la/1cg3eWb'
+                        )">
+                         <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" id="img-lupa-dados" alt="">
+                Livro : Boa Noite Para Quem é De Boa Noite</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                        'Candomblé e Suas Essências', /*nome do produto  - produto.nome*/
+                        '39,90' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '146 Páginas',
+                        'Sem restrição de Idade',
+                        'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem',
+                        'https://mpago.la/2sKvWGw'
+                        )">
+                         <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" id="img-lupa-dados" alt="">
+                Livro : Candomblé e Suas Essências</li>
+
+                <li class="dados-lupa"  onclick="adicionarProduto(
+                        '5 Maneiras para Melhorar sua Auto Confiança', /*nome do produto  - produto.nome*/
+                        '00,00' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '16 Páginas',
+                        'Sem restrição de Idade',
+                        'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas \nem sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com  facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.',
+                        '',
+                        )">
+                         <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" id="img-lupa-dados" alt="">  
+                Livro : 5 Maneiras para Melhorar sua Auto Confiança</li>
+    
+                <li class="dados-lupa"  onclick="adicionarProduto(
+                    '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '400 Páginas', /*Quantidade de pagina*/
+                    'Sem restrição de Idade', /*Idade*/
+                    'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
+                    'https://mpago.la/1AuBUt7'
+                    )">
+                         <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
+                Livro : 5 Técnicas para Turbinar a sua Memória</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '400 Páginas', /*Quantidade de pagina*/
+                    'Sem restrição de Idade', /*Idade*/
+                    'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
+                    '',
+                    )">
+                        <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
+                Livro : Fortalecimento Espiritual</li>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    '5 Passos Para Ter Êxito', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/dtdfQ0G5/exito1.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '104 Páginas',
+                    'Sem restrição de Idade',
+                    'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento  pessoal são atitudes que podem ajudar a superar desafios,  desenvolver habilidades e aumentar a autoconfiança.',
+                    'https://mpago.la/2jLgfcm',
+                    )">
+                        <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" id="img-lupa-dados" alt="">  
+                Livro : 5 Passos Para Ter Êxito Livro 1</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                        '5 Passos Para Ter Êxito Livro 2', /*nome do produto  - produto.nome*/
+                        '29,99' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/9fXgBtKk/exito2.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '80 Páginas',
+                        'Sem restrição de Idade',
+                        'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!'
+                        ,'https://mpago.la/2TdwT66'
+                        )">
+                         <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" id="img-lupa-dados" alt="">  
+                Livro: 5 Passos Para Ter Êxito Livro 2</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'A Felicidade Começa Com Você', /*nome do produto  - produto.nome*/
+                    '29,99 ' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/L6MRRwrF/felicidade1.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '80 Páginas',
+                    'Sem restrição de Idade',
+                    'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado.',
+                    'https://mpago.la/2L3XqGk',
+                    )">
+                    <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" id="img-lupa-dados" alt="">  
+                Livro : A Felicidade Começa Com Você</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'A Felicidade Começa Com Você - Versão 2', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/yx0Hcy3G/felicidade2.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '76 Páginas',
+                    'Sem restrição de Idade',
+                    'Passamos a vida fazendo o nosso melhor para alcançar nossos sonhos e nossos objetivos. Acreditamos que, assim que alcançarmos o sucesso, finalmente estaremos felizes e em paz com o mundo.Isso pode ser verdade. No entanto, o simples fato é que nem todo mundo vai ter sucesso. Apenas uma pequena minoria alcançará o auge da riqueza e do poder. A maioria de nós vai ficar preso vivendo vidas medíocres.',
+                    'https://mpago.la/2mS64aY'
+                    )">
+            <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" id="img-lupa-dados" alt="">  
+                Livro : A Felicidade Começa Com Você - Versão 2</li>
+    
+                <li class="dados-lupa"  onclick="adicionarProduto(
+                        'Administração Do Tempo', /*nome do produto  - produto.nome*/
+                        '19,99' ,/* preço do produto - produto.preço*/
+                        'https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png', /*imagem do produto produto.imagem*/
+                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                        '100 Páginas',
+                        'Sem restrição de Idade',
+                        'A maioria das pessoas reclama da falta de tempo que dispõe para suas atividades diárias devido à enorme carga de tarefas que tem para executar.O que ocorre é que as pessoas quando aprendem em um curso acadêmico, ou mesmo ingressam de alguma forma em uma função, profissão, são sempre instruídas sobre “O que” fazer sendo ignorado o modo como se fazer o trabalho, principalmente aos detalhes que fazem o diferencial para se obter uma maior eficiência e eficácia. Não basta ser especialista no que se faz, é que preciso ter noções da melhor maneira de realizar o trabalhor horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!',
+                        'https://mpago.la/1W1x3mC',
+                        )">
+                    <img src="https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png" id="img-lupa-dados" alt="">  
+                Livro: Administração Do Tempo</li>
+    
+                <li class="dados-lupa" onclick="adicionarProduto(
+                '8 Dicas Para Uma Vida Com Propósito', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/jqD99c20/dicas8.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '85 Páginas',
+                'Sem restrição de Idade',
+                'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
+                ,'https://mpago.la/2z25NjS'
+                )">
+                <img src="https://i.postimg.cc/jqD99c20/dicas8.png" id="img-lupa-dados" alt="">  
+                Livro : 8 Dicas Para Uma Vida Com Propósito </li>
+                        
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    '7 Passos Para O Sucesso Pleno', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '100 Páginas',
+                    'Sem restrição de Idade',
+                    'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente'
+                    ,'https://mpago.la/2EfrZt6'
+                    )">
+                     <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" id="img-lupa-dados" alt="">  
+                Livro : 7 Passos Para O Sucesso Pleno</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'Superar a Ansiedade', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/vBkPbRTR/ansiedade.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '85 Páginas',
+                    'Sem restrição de Idade',
+                    'Uma vida livre de ansiedade é atingível e agora você tem todas as ferramentas necessárias para superar sua ansiedade e começar a viver a vida que você merece. Com um pouco de paciência, uma consciência do seu entorno e de si mesmo, e um compromisso de seguir com as lições que aprendeu, você pode estar no caminho de trabalhar e superar os muitos aspectos diferentes de sua condição debilitante.'
+                    ,'https://mpago.la/1UVfnri'
+                    )">
+                     <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" id="img-lupa-dados" alt="">  
+                Livro : Superar a Ansiedade</li>
+
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'A Magia Da Linguagem Corporal', /*nome do produto  - produto.nome*/
+                    '19,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '84 Páginas',
+                    'Sem restrição de Idade',
+                    'Inegavelmente, a comunicação é tão importante quanto a própria vida. Seria inimaginável o quão caótico o mundo seria sem comunicação. Mesmo os povos primitivos tentaram encontrar maneiras de se comunicar quando as coisas eram muito mais simples na altura. Na nossa era moderna e rápida, a necessidade de comunicação é mil vezes superior. Existem várias formas de comunicação. Cada forma é valiosa, a comunicação não-verbal é uma delas.'
+                    ,'https://mpago.la/1UVfnri'
+                    )">
+                     <img src="https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png" id="img-lupa-dados" alt="">  
+                Livro : A Magia Da Linguagem Corporal</li>
+
+                
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    'Como Se Tornar Um Lider Em Marketing Online', /*nome do produto  - produto.nome*/
+                    '19,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '38 Páginas',
+                    'Sem restrição de Idade',
+                    'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias'
+                    ,'https://mpago.la/1UVfnri'
+                    )">
+                     <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" id="img-lupa-dados" alt="">  
+                Livro : Como Se Tornar Um Lider Em Marketing Online</li>
+
+                <li class="dados-lupa" onclick="adicionarProduto(
+                    '19 Regras Para Se Tornar Um Vencedor', /*nome do produto  - produto.nome*/
+                    '19,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '50 Páginas',
+                    'Sem restrição de Idade',
+                    'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
+                    ,'https://mpago.la/1UVfnri'
+                    )">
+                     <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
+                Livro : 19 Regras Para Se Tornar Um Vencedor</li>
+
+            </ul>
+
+            
+
+        </div>
+
+     </div>
+  
+     
+    <!--lupa mob-->
+    <article class="config-lupa">
+
+        <div class="fundo-lupa">
+            <i class="bi bi-search" id="lupamob"></i>   
+            <input type="search" id="input-lupa" placeholder="O Que Você Procura ?">
+        </div>
+
+        <i class="bi bi-x-circle" id="fechar-busca"></i>
+        
+        <!--DADOS DOS MENUS-->
+         <ul id="listamob">
+   
+            <a href="religião.html"><li class="dados-lupa" id="lista1">Religião</li></a>
+
+            <a href="autoajuda.html"><li class="dados-lupa" id="lista1">Auto Ajuda</li></a>
+
+            <a href="gratuitos.html"><li class="dados-lupa">Gratuitos</li></a>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
+                '49,90' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '151 Páginas',
+                'Sem restrição de Idade',
+                'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
+                'https://mpago.la/2xDZikZ'
+                )" >
+                <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+            Livro : Maravilhas da Magia Cigana Livro 1</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                    'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '185 Páginas',
+                    'Sem restrição de Idade',
+                    'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
+                    'https://mpago.la/2KhowgS'
+                    )">
+                     <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+            Livro : Maravilhas da Magia Cigana Livro 2</li>
+
+            <li class="dados-lupa"  onclick="adicionarProduto(
+                    'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/JzMp15rh/maravilha3.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '164 Páginas',
+                    'Sem restrição de Idade',
+                    'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
+                    'https://mpago.la/1iSY21W'
+                     )">
+            <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+            Livro : Maravilhas da Magia Cigana Livro 3</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                    'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '164 Páginas',
+                    'Sem restrição de Idade',
+                    'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
+                    'https://mpago.la/34fdVnT',
+            )">
+            <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" id="img-lupa-dados" height="80px" width="80px" alt="">
+            Livro : Maravilhas da Magia Cigana Livro 4</li>
+
+            <li class="dados-lupa"   onclick="adicionarProduto(
+                    'Maravilha Da Magia Cigana Livro 5', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/tgmkN0h1/maravilha5.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '181 Páginas',
+                    'Sem restrição de Idade',
+                    'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
+                    'https://mpago.la/2oXF1p3',
+            )">
+             <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" id="img-lupa-dados"  alt="">
+            Livro : Maravilhas da Magia Cigana Livro 5</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+               'Maravilha Da Magia Cigana Livro 6', /*nome do produto  - produto.nome*/
+                '49,90' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/x15tqN83/maravilha6.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '173 Páginas',
+                'Sem restrição de Idade',
+                'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
+                'https://mpago.la/1Hdexfm'
+                )">
+                <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" id="img-lupa-dados" alt="">
+            Livro : Maravilhas da Magia Cigana Livro 6</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+            'As Três Marias - Padilha , Mulambo e Quitéria', /*nome do produto  - produto.nome*/
+            '39,99' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '189 Páginas',
+            'Sem restrição de Idade',
+            'Cada vez que eu me envolvo com entidades espirituais eu me encontro mais enquanto pessoa. Entender como seres etéreos agem me traz a certeza da finitude humana, e da infinitude do espírito. Nada somos diante de uma vida tão frágil. Nada podemos diante da grandeza da essência espiritual. Saber que existe uma dimensão paralela à nossa com seres poderosos a nos circundar nos causa um certo pavor, mas por outro lado a segurança de saber que não estamos sozinhos. Que sim, existem seres poderosos que nos cuidam, nos vigiam, mas também nos castiga. E nos castiga com a parcimônia que o tempo não nos dá. Como Maria Quitéria fez, esperando vinte e cinco anos para cumprir a sua promessa. Para nós uma vida, para ela um piscar de olhos em sua essência.',
+            'https://mpago.la/2jzKUwz'
+            )">
+             <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" id="img-lupa-dados" alt="">
+            Livro : As Três Marias</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+            'Kizomba - Cosmogonia Bantu', /*nome do produto  - produto.nome*/
+            '29,99' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '163 Páginas',
+            'Sem restrição de Idade',
+            'Foi com grande satisfação que recebi o convite para prefaciar esta obra, destacando o autor Zezinho França., também sacerdote Tata Zezinho França de Kabilah, (Tawá-Laewsi) como um dos maiores estudiosos na cultura Bantu da atualidade, o mesmo conseguiu em sua obra inserir informações valiosas para a aprendizagem e conhecimento não somente para os praticantes e simpatizantes das religiões de cultura afrodescendentes, mas também como fonte de entendimento e estudo para outras nações, religiões e pessoas em geral.',
+            'https://mpago.la/2uW1Z38'
+            )">
+             <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" id="img-lupa-dados" alt="">
+            Livro : Kizomba - Cosmogonia Bantu</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                    'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
+                    '49,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '113 Páginas',
+                    'Sem restrição de Idade',
+                    'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
+                    'https://mpago.la/1cg3eWb'
+                    )">
+                     <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" id="img-lupa-dados" alt="">
+            Livro : Boa Noite Para Quem é De Boa Noite</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                    'Candomblé e Suas Essências', /*nome do produto  - produto.nome*/
+                    '39,90' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '146 Páginas',
+                    'Sem restrição de Idade',
+                    'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem',
+                    'https://mpago.la/2sKvWGw'
+                    )">
+                     <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" id="img-lupa-dados" alt="">
+            Livro : Candomblé e Suas Essências</li>
+
+            <li class="dados-lupa"  onclick="adicionarProduto(
+                    '5 Maneiras para Melhorar sua Auto Confiança', /*nome do produto  - produto.nome*/
+                    '00,00' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '16 Páginas',
+                    'Sem restrição de Idade',
+                    'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas \nem sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com  facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.',
+                    '',
+                    )">
+                     <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" id="img-lupa-dados" alt="">  
+            Livro : 5 Maneiras para Melhorar sua Auto Confiança</li>
+
+            <li class="dados-lupa"  onclick="adicionarProduto(
+                '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '400 Páginas', /*Quantidade de pagina*/
+                'Sem restrição de Idade', /*Idade*/
+                'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
+                'https://mpago.la/1AuBUt7'
+                )">
+                     <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
+            Livro : 5 Técnicas para Turbinar a sua Memória</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '400 Páginas', /*Quantidade de pagina*/
+                'Sem restrição de Idade', /*Idade*/
+                'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
+                '',
+                )">
+                    <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
+            Livro : Fortalecimento Espiritual</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                '5 Passos Para Ter Êxito', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/dtdfQ0G5/exito1.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '104 Páginas',
+                'Sem restrição de Idade',
+                'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento  pessoal são atitudes que podem ajudar a superar desafios,  desenvolver habilidades e aumentar a autoconfiança.',
+                'https://mpago.la/2jLgfcm',
+                )">
+                    <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" id="img-lupa-dados" alt="">  
+            Livro : 5 Passos Para Ter Êxito Livro 1</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                    '5 Passos Para Ter Êxito Livro 2', /*nome do produto  - produto.nome*/
+                    '29,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/9fXgBtKk/exito2.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '80 Páginas',
+                    'Sem restrição de Idade',
+                    'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!'
+                    ,'https://mpago.la/2TdwT66'
+                    )">
+                     <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" id="img-lupa-dados" alt="">  
+            Livro: 5 Passos Para Ter Êxito Livro 2</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'A Felicidade Começa Com Você', /*nome do produto  - produto.nome*/
+                '29,99 ' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/L6MRRwrF/felicidade1.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '80 Páginas',
+                'Sem restrição de Idade',
+                'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado.',
+                'https://mpago.la/2L3XqGk',
+                )">
+                <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" id="img-lupa-dados" alt="">  
+            Livro : A Felicidade Começa Com Você</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'A Felicidade Começa Com Você - Versão 2', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/yx0Hcy3G/felicidade2.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '76 Páginas',
+                'Sem restrição de Idade',
+                'Passamos a vida fazendo o nosso melhor para alcançar nossos sonhos e nossos objetivos. Acreditamos que, assim que alcançarmos o sucesso, finalmente estaremos felizes e em paz com o mundo.Isso pode ser verdade. No entanto, o simples fato é que nem todo mundo vai ter sucesso. Apenas uma pequena minoria alcançará o auge da riqueza e do poder. A maioria de nós vai ficar preso vivendo vidas medíocres.',
+                'https://mpago.la/2mS64aY'
+                )">
+        <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" id="img-lupa-dados" alt="">  
+            Livro : A Felicidade Começa Com Você - Versão 2</li>
+
+            <li class="dados-lupa"  onclick="adicionarProduto(
+                    'Administração Do Tempo', /*nome do produto  - produto.nome*/
+                    '19,99' ,/* preço do produto - produto.preço*/
+                    'https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png', /*imagem do produto produto.imagem*/
+                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                    '100 Páginas',
+                    'Sem restrição de Idade',
+                    'A maioria das pessoas reclama da falta de tempo que dispõe para suas atividades diárias devido à enorme carga de tarefas que tem para executar.O que ocorre é que as pessoas quando aprendem em um curso acadêmico, ou mesmo ingressam de alguma forma em uma função, profissão, são sempre instruídas sobre “O que” fazer sendo ignorado o modo como se fazer o trabalho, principalmente aos detalhes que fazem o diferencial para se obter uma maior eficiência e eficácia. Não basta ser especialista no que se faz, é que preciso ter noções da melhor maneira de realizar o trabalhor horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!',
+                    'https://mpago.la/1W1x3mC',
+                    )">
+                <img src="https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png" id="img-lupa-dados" alt="">  
+            Livro: Administração Do Tempo</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+            '8 Dicas Para Uma Vida Com Propósito', /*nome do produto  - produto.nome*/
+            '29,99' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/jqD99c20/dicas8.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '85 Páginas',
+            'Sem restrição de Idade',
+            'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
+            ,'https://mpago.la/2z25NjS'
+            )">
+            <img src="https://i.postimg.cc/jqD99c20/dicas8.png" id="img-lupa-dados" alt="">  
+            Livro : 8 Dicas Para Uma Vida Com Propósito </li>
+                    
+            <li class="dados-lupa" onclick="adicionarProduto(
+                '7 Passos Para O Sucesso Pleno', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '100 Páginas',
+                'Sem restrição de Idade',
+                'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente'
+                ,'https://mpago.la/2EfrZt6'
+                )">
+                 <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" id="img-lupa-dados" alt="">  
+            Livro : 7 Passos Para O Sucesso Pleno</li>
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'Superar a Ansiedade', /*nome do produto  - produto.nome*/
+                '29,99' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/vBkPbRTR/ansiedade.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '85 Páginas',
+                'Sem restrição de Idade',
+                'Uma vida livre de ansiedade é atingível e agora você tem todas as ferramentas necessárias para superar sua ansiedade e começar a viver a vida que você merece. Com um pouco de paciência, uma consciência do seu entorno e de si mesmo, e um compromisso de seguir com as lições que aprendeu, você pode estar no caminho de trabalhar e superar os muitos aspectos diferentes de sua condição debilitante.'
+                ,'https://mpago.la/1UVfnri'
+                )">
+                 <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" id="img-lupa-dados" alt="">  
+            Livro : Superar a Ansiedade</li>
+
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'A Magia Da Linguagem Corporal', /*nome do produto  - produto.nome*/
+                '19,90' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '84 Páginas',
+                'Sem restrição de Idade',
+                'Inegavelmente, a comunicação é tão importante quanto a própria vida. Seria inimaginável o quão caótico o mundo seria sem comunicação. Mesmo os povos primitivos tentaram encontrar maneiras de se comunicar quando as coisas eram muito mais simples na altura. Na nossa era moderna e rápida, a necessidade de comunicação é mil vezes superior. Existem várias formas de comunicação. Cada forma é valiosa, a comunicação não-verbal é uma delas.'
+                ,'https://mpago.la/1UVfnri'
+                )">
+                 <img src="https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png" id="img-lupa-dados" alt="">  
+            Livro : A Magia Da Linguagem Corporal</li>
+
+            
+            <li class="dados-lupa" onclick="adicionarProduto(
+                'Como Se Tornar Um Lider Em Marketing Online', /*nome do produto  - produto.nome*/
+                '19,90' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '38 Páginas',
+                'Sem restrição de Idade',
+                'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias'
+                ,'https://mpago.la/1UVfnri'
+                )">
+                 <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" id="img-lupa-dados" alt="">  
+            Livro : Como Se Tornar Um Lider Em Marketing Online</li>
+
+
+            <li class="dados-lupa" onclick="adicionarProduto(
+                '19 Regras Para Se Tornar Um Vencedor', /*nome do produto  - produto.nome*/
+                '19,90' ,/* preço do produto - produto.preço*/
+                'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png', /*imagem do produto produto.imagem*/
+                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+                '50 Páginas',
+                'Sem restrição de Idade',
+                'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
+                ,'https://mpago.la/1UVfnri'
+                )">
+                 <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
+            Livro : 19 Regras Para Se Tornar Um Vencedor</li>
+            
+         </ul>
+
+
+    </article>
+    
+    <!--ATIVAÇÃO DAS NAVEGAÇÕES--> 
+ 
+</header>
+
+<main class="produto-isolado">
+
+<!--Categoria um-->
+<article class="produto-categoria" id="categoria-produto">
+
+    <!--Nome Categoria-->
+    <h2 id="nome-categoria"> Religiosos</h2>
+    <hr id="linha">
+
+</article>
+
+<!--PRODUTO-->
+<section class="fundo-produtos" id="fundo-produtosmob">
+
+    <!--bloco produto-->
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Boa Noite Para<br>Quem é De Boa Noite </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$39,90</p>
+        <button class="botao-compra" id="botao-compra"  onclick="adicionarProduto(
+            'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '113 Páginas',
+            'Sem restrição de Idade',
+            'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
+            'https://mpago.la/1cg3eWb'
+            )">Comprar</button>
+            
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Candomblé em sua Essência</h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$39,90</p>
+        <button class="botao-compra" id="botao-compra"  onclick="adicionarProduto(
+            'Candomblé e Suas Essências', /*nome do produto  - produto.nome*/
+            '39,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '146 Páginas',
+            'Sem restrição de Idade',
+            'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem',
+            'https://mpago.la/2sKvWGw'
+            )">Comprar</button>
+            
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/mgy6M6XM/fortalecimento.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Fortalecimento Espiritual</h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">Gratuito</p>
+        <button class="botao-compra" id="botao-compra" onclick="adicionarProduto(
+        'Fortalecimento Espiritual', /*nome do produto  - produto.nome*/
+        '00,00' ,/* preço do produto - produto.preço*/
+        'https://i.postimg.cc/mgy6M6XM/fortalecimento.png', /*imagem do produto produto.imagem*/
+        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+        '400 Páginas', /*Quantidade de pagina*/
+        'Sem restrição de Idade', /*Idade*/
+        'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
+        ''
+        )">Comprar</button>
+            
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Kizomba miolo </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$29,99</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Kizomba Miolo', /*nome do produto  - produto.nome*/
+            '29,99' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '151 Páginas',
+            'Sem restrição de Idade',
+            'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
+            'https://mpago.la/2uW1Z38'
+            )">Comprar</button>
+
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 1 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '151 Páginas',
+            'Sem restrição de Idade',
+            'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
+            'https://mpago.la/2xDZikZ'
+            )">Comprar</button>
+
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 2 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '185 Páginas',
+            'Sem restrição de Idade',
+            'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
+            'https://mpago.la/2KhowgS'
+            )">Comprar</button>
+      
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 3 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://thumbs2.imgbox.com/d4/d9/FqLJlINh_t.jpg', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '164 Páginas',
+            'Sem restrição de Idade',
+            'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
+            'https://mpago.la/1iSY21W'
+            )">Comprar</button>
+      
+    </div>
+ 
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 4 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '164 Páginas',
+            'Sem restrição de Idade',
+            'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
+            'https://mpago.la/34fdVnT',
+            )">Comprar</button>
+            
+    </div>
+    
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 5 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 5', /*nome do produto  - produto.nome*/
+            '49,90' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/tgmkN0h1/maravilha5.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '181 Páginas',
+            'Sem restrição de Idade',
+            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
+            'https://mpago.la/2oXF1p3',
+            )">Comprar</button>
+            
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">Maravilha Da Magia Cigana Livro 6 </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$49,90</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'Maravilha Da Magia Cigana Livro 6', /*nome do produto  - produto.nome*/
+             '49,90' ,/* preço do produto - produto.preço*/
+             'https://i.postimg.cc/x15tqN83/maravilha6.png', /*imagem do produto produto.imagem*/
+             'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+             '173 Páginas',
+             'Sem restrição de Idade',
+             'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
+             'https://mpago.la/1Hdexfm'
+             )">Comprar</button>
+    </div>
+
+    <div class="bloco" id="bloco">
+        <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" class="img-fundo" id="img-fundomob">
+        <h2 class="titulo-produto" id="titulo-produto">As Três Marias  </h2>
+        <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
+        <p class="preço-produto" id="preço-produto">R$39,99</p>
+        <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
+            'As Três Marias ', /*nome do produto  - produto.nome*/
+            '39,99' ,/* preço do produto - produto.preço*/
+            'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png', /*imagem do produto produto.imagem*/
+            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
+            '181 Páginas',
+            'Sem restrição de Idade',
+            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
+            'https://mpago.la/2jzKUwz'
+            )">Comprar</button>
+            
+    </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+    <!--Redes Sociais-->
+    <article class="redes" id="redes">
+        <i class="bi bi-whatsapp" id="imagem-redes">11 93498-3223</i>
+        <i class="bi bi-facebook" id="imagem-redes"> Aweto Instituto</i>
+        <i class="bi bi-instagram" id="imagem-redes"> @awetoinstituto</i>
+    </article>
+    <!--Dados Empresáriais-->
+    <article class="fundo-texto" id="fundo-texto">
+
+        <div class="infor-final" id="infor-final">
+        FALE CONOSCO:<br>
+        <br>
+        +55 11 93498-3223<br>       
+        <br> 
+        institutoaweto@aweto.com.br
+        </div>
+
+        <div class="infor-final" id="infor-final">
+        Conheça Nossas Redes Sociais :<br>
+        <i class="bi bi-whatsapp" id="logo-redes"></i>
+        <i class="bi bi-facebook" id="logo-redes"></i>
+        <i class="bi bi-instagram" id="logo-redes"></i>
+        </div>
+
+        <div  class="mod-final" id="mod-final">
+            Copyright © 2024 Aweto Ecommerce, todos os direitos reservados. Instituto Aweto Brasileira . Inscrição estadual 
+            nº : 00019  CNPJ/MF sob o nº: 05.129.635/0001-07 . 
+            CEP: 09.332-550 , São Paulo                
+        </div>
+
+         
+    </article>
+</footer>
+
+<script src="scriptJS/script.js"></script>
+<script src="scriptJS/produto.js"></script>
+<script src="scriptJS/unico.js"></script>
+
+</body>
+</html>

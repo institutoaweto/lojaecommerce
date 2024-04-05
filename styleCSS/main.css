@@ -1,0 +1,79 @@
+
+
+/*CARROSSEL*/
+
+
+.fundo-carrossel{
+    position: absolute;
+    margin: auto;
+    background-color: red;     
+}
+.mySlides {
+    display: none;
+  }
+#img-slideshow{
+    width: 100%;
+    height: 500px;
+    transform: translateY(95px);
+    position: absolute;
+  }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 2s ease;
+    border-radius: 0 3px 3px 0;
+  }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+/*CAMINHOS*/
+
+
+/*Banners*/
+
+
+/*CAMINHOS MOB*/
+
+
+
+
+
+
+/*DESCONTO DOIS*/
+
+
+.desconto-dois{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0794d3;
+    height:40px;
+    color:#d0dd97;
+    transform: translateY(580px);
+}
+
+

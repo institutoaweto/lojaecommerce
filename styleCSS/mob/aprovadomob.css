@@ -1,0 +1,297 @@
+@media (max-width:700px){
+    /*DESATIVAR PARA MOBILE*/
+    #texto-nav,
+    #redes,.fundo-img-catalogo,.botao-catalogo,.fundo,.lupa,.pesquisa,
+    .fechar,#input-pesquisa,.fundo:hover,.prev, .next, .caminhos,
+    .fundo-anuncioebooks,.caminhos,.fundo-anuncioebooks,
+    .botao-catalogo,.lupa-pesquisa,#input-pesquisa,#lista{
+        display: none;
+        transition: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+/*****************************************GERAL********************************************************
+**************************************************************************************************
+**************************************************************************************************/
+
+/*CONFIGURAÇÕES DO CORPO E GERAL*/
+
+html,body,main,section,.footer{
+    width: 100%;
+}
+header{
+    display: flex;
+    z-index: 0;
+    width: 100%;
+}
+/*CABEÇALHO*/
+header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 120px;
+}
+/*ICONE MENU*/
+.headermob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+}
+.fundo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 80px; 
+        z-index: 2;
+        margin-left: 40px;
+}
+.menu-ativar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        background-color: #0c212d;
+        z-index: 2;
+        margin:0px;
+}
+.ativar-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 800px; 
+        z-index: 2;
+        margin-left: 40px;
+}
+#nav-icone-menu{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+}
+
+.fechar-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin-left: 40px;
+}
+.fundo-texto-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        transform: translateY(-250px);
+        top: 0;
+}
+.menu-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 25px;
+        margin: 0;
+}
+
+    
+/*LOGOTIPO*/
+.logomob{
+        margin-top: -8px;
+        margin-left: 200px;
+        transform: scale(0.6);
+        padding: 5px;
+}
+/*CONFIGURAÇÃO DA LUPA MOBILE*/
+.config-lupa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color:#0c212d;
+        width: 100%;
+        padding:9px;
+        color: #0c212d;
+        transform: translateY(-40px);
+}
+.fundo-lupa{
+        display: flex;
+        justify-content: left;
+        background-color: white;
+        width: 75%;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 6px;
+        color: #0c212d; 
+        height: 30px;           
+}
+#input-lupa{
+        padding:5px;
+        margin-left:10px; 
+        color: #0c212d;
+        width: 90%;   
+        font-size: 20px; 
+}
+
+/*lista da lupa*/
+#lupamob{
+        font-size: 25px;
+        color: #02141c;
+        background-color: white;
+        padding:2px;
+        font-weight: bold;
+        transform: translateY(-7px);
+}
+#listamob{
+        display: none;
+        transform: translateY(-490px) translateX(10px);
+        position: fixed;
+        width: 100%;
+}
+.ativo-listamob{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+        height: 500px;
+        background-color: white;
+        margin-top:1540px; 
+        margin-left:10px;     
+}
+#fechar-busca{
+        font-size: 35px;
+        color: #ff9b00;
+        padding: 1px;
+        transform: translateX(15px);
+}
+
+/*****************************************CORPO********************************************************
+**************************************************************************************************
+**************************************************************************************************/
+
+#produto-detalhes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#form-compra{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#esconder{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 100%;
+}
+#imagem-produto{
+    display: flex;
+    width: 250px;
+}
+#product-name{
+    margin-top: 40px;
+}
+#produto-preço{
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0c212d;
+}
+.form-compra{
+    width: 100%;
+}
+.dados-input{
+    width: 100%;
+}
+#tutorial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#nomepasso{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+.passos{
+    width: 100%;
+    display: flex;
+}
+.img-passo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    display: flex;
+}
+.informaçao-passo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 95%;
+    transform: scale(0.9);
+}
+
+/*FINAL*/
+
+.footer{
+    background-color: #02141c;
+    transform: translateY(300px);
+    height: 1000px;
+    width: 100%;
+}
+/*Dados Empresariais*/
+#fundo-texto{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+}
+#infor-final{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+#logo-redes{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    transform: translateY(250px) translateX(-125px);
+}
+
+}
