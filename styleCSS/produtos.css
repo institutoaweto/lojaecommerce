@@ -57,15 +57,15 @@
     text-transform: capitalize;
 }
 #desconto-produto{
-    transform: translateY(-35px) translateX(-22px);
+    transform: translateY(-35px) translateX(-14px);
     font-size: 16px;
-    width: 80px;
+    width: 40%;
 }
 #preço-produto{
     font-size: 25px;
     font-weight: bold;
     color:#0794d3;
-    transform: translateY(-40px);
+    transform: translateY(-40px) translateX(20px);
 }
 #carrinho-produtos{
     display: flex;
