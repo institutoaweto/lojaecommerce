@@ -26,6 +26,7 @@
     display: flex;
     z-index: 0;
     width: 100%;
+
     }
 
     /*CABEÇALHO*/
@@ -55,6 +56,7 @@
         height: 80px; 
         z-index: 2;
         margin-left: 40px;
+       
       
     }
     .menu-ativar{
@@ -92,6 +94,7 @@
         justify-content: center;
         width: 80px;
         height: 80px;
+        color: white;
       
     }
 
