@@ -36,7 +36,7 @@ header{
 
 }
 
-#logodesk{
+#logodesk{  
     height: 70px;
     width: 80px;
 }
@@ -142,8 +142,10 @@ a{
     top: 0;
     transform: translateX(-35px) translateY(0px);
 }
-.dados-lupa:hover{
-    background-color: aqua;
+.dados-lupamobum:hover
+,.dados-lupa:hover{
+    background-color: #0794d3;
+    color: white;
 }
 
 

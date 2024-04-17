@@ -173,6 +173,7 @@ width: 100%;
 
 /*SISTEMA LOGOTIPO ICON MOB*/
 #logomob{
+
     transform: scale(0.8);
 }
 
@@ -196,6 +197,7 @@ width: 100%;
     padding: 10px;
     width: 100%;
     transform: translateY(-40px);
+    background-color: red;
   
 }
 .fundo-input{
@@ -235,7 +237,9 @@ width: 100%;
     list-style: none;
     color: black;
     top: 0;
-
+}
+.mob-dadoslupa:hover{
+    background-color: #0794d3;
 }
 /* ATIVAR O INPUT*/
 .ativar-seçao-lupa{

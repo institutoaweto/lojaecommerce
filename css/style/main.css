@@ -16,7 +16,6 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: red;
 }
 #img-slideshow{
     display: flex;
@@ -34,3 +33,4 @@ main{
     color: white;
     font-weight: bold;
 }
+
