@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/cabeçalho.css">
+    <link rel="stylesheet" href="css/style/header.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="headermob">
+
+        <!--LOGOTIPO DESKTOP-->
+        <img src="aweto.png" alt="" id="logodesk">
+
+        <!--Menu mobile-->
+        <article class="menu">
+
+            <i class="bi bi-list" id="icone-menu"></i>
+
+                <!--BLOCO MENU MOBILE-->
+                <div class="config-menu">
+
+                <div class="config-fechar-menu">
+                    <img src="logoaweto.png" alt="" id="logotipo-menu">
+                    <i class="bi bi-x" id="icone-fechar-menu"></i>
+                </div>
+              
+                <!--OPÇÃO MENU MOBILE-->
+                <div class="seçao-menu">
+                    <div class="menu-catalogo">
+                        <a href="" id="pagina-menu">Religião</a>
+                        <a href="" id="pagina-menu">Desenvolvimento</a>
+                        <a href="" id="pagina-menu">Gratuítos</a>
+                        <a href="" id="pagina-menu">Todos</a>
+                    </div>
+
+                    <div class="menu-redesociais">
+                        <i class="bi bi-whatsapp" id="menu-icone-redes"><p id="texto-menu-redesociais">11 95375-8405</p></i>
+                        <i class="bi bi-instagram" id="menu-icone-redes"><p id="texto-menu-redesociais">@institutoaweto</p></i>
+                        <i class="bi bi-facebook" id="menu-icone-redes"><p id="texto-menu-redesociais">Instituto Aweto</p></i>
+                    </div>
+
+                    <div class="menu-sobrenos">
+                        <div id="sobrenos">
+                            <a href="" id="dados-sobrenos">Quem somos</a>
+        
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!--BLOCO LOGOTIPO MOBILE-->
+                <article class="config-logo">
+                <img src="logoaweto.png" alt="" id="logomob">
+                </article>
+
+                <!--BLOCO LUPA MOBILE-->
+                <div class="config-lupa">
+                <i class="bi bi-search" id="icone-lupa"></i>
+                </div>
+                <div class="seçao-lupa">
+                    <div class="fundo-input">
+                        <input type="text" id="mob-inputpesquisa" placeholder="Pesquisa">
+                        <i class="bi bi-x" id="close-menu-lupa"></i>
+                        <ul class="mob-lupapesquisa" id="listaseçao">
+                            <li class="mob-dadoslupa"><a href="" >Religião</a></li>
+                            <li class="mob-dadoslupa"><a href="" >Desenvolvimento Social e Profissional</a></li>
+                            <li class="mob-dadoslupa"><a href="" >Gratuítos</a></li>
+                            <li class="mob-dadoslupa"><a href="" >Todos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+        </article>
+        
+         <!--Menu interátivo-->
+        <article class="header-infor">
+
+            <p id="header-sub">Seja Bem Vindo a Loja Aweto</p>
+            <p id="header-sup">Explore o mundo dos e-books</p>
+                <!--lUPA MOBILE-->
+                <div class="fundo-inputmob">
+                    <input type="text" id="inputmob" placeholder="O que você Procura">
+
+                    <ul class="lupa-pesquisamobum" id="listamobum">
+                        <li class="dados-lupamobum"><a href="" >Religião</a></li>
+                        <li class="dados-lupamobum"><a href="" >Desenvolvimento Social e Profissional</a></li>
+                        <li class="dados-lupamobum"><a href="" >Gratuítos</a></li>
+                        <li class="dados-lupamobum"><a href="" >Todos</a></li>
+                    </ul>               
+                </div>
+            
+                <nav>
+                    <a href="religião.html" id="dados-menu">Religião</a>
+                    <a href="" id="dados-menu">Desenvolvimento Socialaaaaaaaaa</a>
+                    <a href="" id="dados-menu">Gratuítos</a>
+                    <a href="" id="dados-menu">Todos</a>
+                </nav>
+
+        </article>
+
+        <!--LUPA DESKTOP-->
+        <article class="fundo-pesquisa">
+
+            <div class="lupa">
+                <i class="bi bi-search" id="icone-lupadesk"></i>
+            </div>
+            <div class="pesquisa">
+                <input type="text" name="" id="input-pesquisa" placeholder="O que procura">
+            </div> 
+            <ul class="lupa-pesquisa" id="listadesk">
+                    
+                    <li class="dados-lupa"><a href="" >Religião</a></li>
+                    <li class="dados-lupa"><a href="" >Desenvolvimento Social e Profissional</a></li>
+                    <li class="dados-lupa"><a href="" >Gratuítos</a></li>
+                    <li class="dados-lupa"><a href="" >Todos</a></li>
+
+                    <script>
+                        /*lupa desktop*/
+                        let fundolupa = document.querySelector('.fundo-pesquisa');
+                        let inputlupa = document.querySelector('#input-pesquisa');
+        
+                        inputlupa.addEventListener('input', function(){
+                        fundolupa.classList.add('ativar-lupa')
+                        });
+        
+                        inputlupa.addEventListener('mouseout', function(){
+                        fundolupa.classList.remove('ativar-lupa')
+                        });
+        
+                        const pesquisainput = document.getElementById('input-pesquisa');//Barra de Pesquisa
+                        const produtoinput  = document.getElementById('listadesk').getElementsByTagName('li'); //Lista + Dados
+                        
+                        pesquisainput.addEventListener('input',function(){
+                        const pesquisaterminal = pesquisainput.value.toLowerCase();
+        
+                        for (let i = 0; i < produtoinput.length; i++){
+                            const produtonome = produtoinput[i].innerText.toLowerCase();
+                            if (produtonome.includes(pesquisaterminal)){
+                                produtoinput[i].style.display = 'block'; 
+                            } else{
+                                produtoinput[i].style.display = 'none';
+                            }};
+                        });
+                    </script>
+            </ul>
+
+        </article>
+
+    </header>
+</body>
+</html>

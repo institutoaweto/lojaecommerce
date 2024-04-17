@@ -4,1040 +4,1031 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="img/aweto.png">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="styleCSS/mob/unicomob.css">
-    <link rel="stylesheet" href="styleCSS/header.css">
-    <link rel="stylesheet" href="styleCSS/main.css">
-    <link rel="stylesheet" href="styleCSS/unico.css">
-    <link rel="stylesheet" href="styleCSS/footer.css">
-    <link rel="stylesheet" href="styleCSS/pagamento.css">
-    <link rel="stylesheet" href="styleCSS/semelhantes.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/8s8LnN55/aweto.png">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/cabeçalho.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/main.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/unico.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/produtos.css">
+    <link rel="stylesheet" href="css/style/header.css">
+    <link rel="stylesheet" href="css/style/main.css">
+    <link rel="stylesheet" href="css/style/unico.css">
+    <link rel="stylesheet" href="css/style/produtos.css">
     <title>Loja Aweto</title>
+
 </head>
 <body>
-<style>
-        @media (max-width:700px){
-        #nav-icone-menu,
-        .fundo-texto-menu,.fundo-clase,.fundo-menu,.fundo-lupa,#input-lupa,.caminho-mobile,#listamob,#fechar-busca{
-                display: flex;
-        }
-        body,html{
+    <style>
+        @media (max-width:700px) {
+            body,html{
             padding: 0px;
             margin:0px;
             width:100%;
            overflow-x: hidden;
         }
-        #logo{
-        transform: translateX(50px) translateY(10px) scale(0.9); 
+        /*ATIVAR PARA MOBILE*/
+           #header-sub, #header-sup,.header-infor,#logomob,
+           .fundo-inputmob{
+            display: flex;
+           }    
+
+           /*ATIVAR MENU INTERÁTIVO*/
+            .ativarscrols{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            z-index: 2;
+            }
+
+            /*CONFIGURAÇÕES DO MENU INTERÁTIVO*/
+           .config-menu{
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            background-color: #0c212d;
+            position: absolute;
+            margin-left: -10px;
+            margin-top: 660px;
+            overflow-y: auto;
+           } 
+           
+           .ativar-configmenu{
+            display: flex;
+            }
+           
+            /*desativar para */
+            .fundo-pesquisa{
+                display: none;
+            }
+            .lupa-pesquisa{
+            display: none;
+            height: 100%;
+            overflow: hidden;
+            transform: translateY(-50px );
+            }
+
+            /*MAIN*/
+
+
+        
         }
-    }
-
-     
-</style>
-
+    </style>
 
 <header class="headermob">
 
-    <!--Menu mob-->
-    <div class="fundo-menu" >
+    <!--LOGOTIPO DESKTOP-->
+    <img src="aweto.png" alt="" id="logodesk">
 
-        <i class="bi bi-list" id="nav-icone-menu"></i>
-        
-        <div class="fechar-menu">
-        <i class="bi bi-x-circle"></i>
-        </div>
+    <!--Menu mobile-->
+    <article class="menu">
 
-         <div class="fundo-texto-menu">
-            <a href="index.html" class="menu-texto">Início</a>
-            <a href="religião.html" class="menu-texto">Religião</a>
-            <a href="autoajuda.html" class="menu-texto">Desenvolvimento Social</a>
-            <a href="gratuitos.html" class="menu-texto">Gratuitos</a>
-            <a href="todos.html" class="menu-texto">Todos</a> 
-         </div>
+        <i class="bi bi-list" id="icone-menu"></i>
 
+            <!--BLOCO MENU MOBILE-->
+            <div class="config-menu">
 
-    </div>
+            <div class="config-fechar-menu">
+                <img src="logoaweto.png" alt="" id="logotipo-menu">
+                <i class="bi bi-x" id="icone-fechar-menu"></i>
+            </div>
+          
+            <!--OPÇÃO MENU MOBILE-->
+            <div class="seçao-menu">
+                <div class="menu-catalogo">
+                    <a href="index.html" id="pagina-menu">Início</a>
+                    <a href="religião.html" id="pagina-menu">Religião</a>
+                    <a href="desenvolvimento.html" id="pagina-menu">Desenvolvimento Social e Profissional</a>
+                    <a href="promoçao.html" id="pagina-menu">Promoção e Ofertas</a>
+                    <a href="todos.html" id="pagina-menu">Todos</a>
+                </div>
 
-    <!--Logotipo-->
-    <a href="index.html">
-    <img src="https://i.postimg.cc/8s8LnN55/aweto.png" id="logo" class="logomob">
-    </a>
+                <div class="menu-redesociais">
+                    <i class="bi bi-whatsapp" id="menu-icone-redes"><p id="texto-menu-redesociais">11 95375-8405</p></i>
+                    <i class="bi bi-instagram" id="menu-icone-redes"><p id="texto-menu-redesociais">@institutoaweto</p></i>
+                    <i class="bi bi-facebook" id="menu-icone-redes"><p id="texto-menu-redesociais">Instituto Aweto</p></i>
+                </div>
 
-    <!--Navegação-->
-    <nav>
-        <a href="religião.html"><p id="texto-nav" class="clique-menu1">Religião</p></a>
-        <a href="autoajuda.html"><p id="texto-nav" class="clique-menu2">Desenvolvimento Social</p></a>
-        <a href="gratuitos.html"><p id="texto-nav" class="clique-menu3">Gratuitos</p></a>
-        <a href="todos.html"><p id="texto-nav" class="clique-menu4">Todos</p> </a>
-        <a href=""><p id="texto-nav" class="clique-menu5"></p> </a>
-        <a href=""><p id="texto-nav" class="clique-menu6"></p> </a>
-    </nav>
-
-    <!--lupa-->
-    <div class="fundo">
-        <div class="lupa">
-            <i class="bi bi-search"></i>
-        </div>
-        <div class="pesquisa" >
-
-            <input type="text" name="" id="input-pesquisa" placeholder="O que procura">
-           
-            <!--Categoria oficial-->
-            <ul class="lupa-pesquisa" id="lista">
-
-                <a href="religião.html"><li class="dados-lupa" id="lista1">Religião</li></a>
-
-                <a href="autoajuda.html"><li class="dados-lupa" id="lista1">Desenvolvimento Social</li></a>
-
-                <a href="gratuitos.html"><li class="dados-lupa">Gratuitos</li></a>
+                <div class="menu-sobrenos">
+                    <div id="sobrenos">
+                        <a href="https://www.institutoaweto.com.br" id="dados-sobrenos">Quem somos</a>
     
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '151 Páginas',
-                    'Sem restrição de Idade',
-                    'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
-                    'https://mpago.la/2xDZikZ'
-                    )" >
-                    <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-                Livro : Maravilhas da Magia Cigana Livro 1</li>
-    
-                <li class="dados-lupa" onclick="adicionarProduto(
-                        'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
-                        '49,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '185 Páginas',
-                        'Sem restrição de Idade',
-                        'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
-                        'https://mpago.la/2KhowgS'
-                        )">
-                         <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-                Livro : Maravilhas da Magia Cigana Livro 2</li>
-    
-                <li class="dados-lupa"  onclick="adicionarProduto(
-                        'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
-                        '49,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/JzMp15rh/maravilha3.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '164 Páginas',
-                        'Sem restrição de Idade',
-                        'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
-                        'https://mpago.la/1iSY21W'
-                         )">
-                <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-                Livro : Maravilhas da Magia Cigana Livro 3</li>
-    
-                <li class="dados-lupa" onclick="adicionarProduto(
-                        'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
-                        '49,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '164 Páginas',
-                        'Sem restrição de Idade',
-                        'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
-                        'https://mpago.la/34fdVnT',
-                )">
-                <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-                Livro : Maravilhas da Magia Cigana Livro 4</li>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-                <li class="dados-lupa"   onclick="adicionarProduto(
-                        'Maravilha Da Magia Cigana Livro 5', /*nome do produto  - produto.nome*/
-                        '49,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/tgmkN0h1/maravilha5.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '181 Páginas',
-                        'Sem restrição de Idade',
-                        'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
-                        'https://mpago.la/2oXF1p3',
-                )">
-                 <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" id="img-lupa-dados"  alt="">
-                Livro : Maravilhas da Magia Cigana Livro 5</li>
-    
-                <li class="dados-lupa" onclick="adicionarProduto(
-                   'Maravilha Da Magia Cigana Livro 6', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/x15tqN83/maravilha6.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '173 Páginas',
-                    'Sem restrição de Idade',
-                    'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
-                    'https://mpago.la/1Hdexfm'
-                    )">
-                    <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" id="img-lupa-dados" alt="">
-                Livro : Maravilhas da Magia Cigana Livro 6</li>
+            <!--BLOCO LOGOTIPO MOBILE-->
+            <article class="config-logo">
+            <img src="logoaweto.png" alt="" id="logomob">
+            </article>
 
-                <li class="dados-lupa" onclick="adicionarProduto(
-                'As Três Marias - Padilha , Mulambo e Quitéria', /*nome do produto  - produto.nome*/
-                '39,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '189 Páginas',
-                'Sem restrição de Idade',
-                'Cada vez que eu me envolvo com entidades espirituais eu me encontro mais enquanto pessoa. Entender como seres etéreos agem me traz a certeza da finitude humana, e da infinitude do espírito. Nada somos diante de uma vida tão frágil. Nada podemos diante da grandeza da essência espiritual. Saber que existe uma dimensão paralela à nossa com seres poderosos a nos circundar nos causa um certo pavor, mas por outro lado a segurança de saber que não estamos sozinhos. Que sim, existem seres poderosos que nos cuidam, nos vigiam, mas também nos castiga. E nos castiga com a parcimônia que o tempo não nos dá. Como Maria Quitéria fez, esperando vinte e cinco anos para cumprir a sua promessa. Para nós uma vida, para ela um piscar de olhos em sua essência.',
-                'https://mpago.la/2jzKUwz'
-                )">
-                 <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" id="img-lupa-dados" alt="">
-                Livro : As Três Marias</li>
- 
-                <li class="dados-lupa" onclick="adicionarProduto(
-                'Kizomba - Cosmogonia Bantu', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '163 Páginas',
-                'Sem restrição de Idade',
-                'Foi com grande satisfação que recebi o convite para prefaciar esta obra, destacando o autor Zezinho França., também sacerdote Tata Zezinho França de Kabilah, (Tawá-Laewsi) como um dos maiores estudiosos na cultura Bantu da atualidade, o mesmo conseguiu em sua obra inserir informações valiosas para a aprendizagem e conhecimento não somente para os praticantes e simpatizantes das religiões de cultura afrodescendentes, mas também como fonte de entendimento e estudo para outras nações, religiões e pessoas em geral.',
-                'https://mpago.la/2uW1Z38'
-                )">
-                 <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" id="img-lupa-dados" alt="">
-                Livro : Kizomba - Cosmogonia Bantu</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                        'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
-                        '49,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '113 Páginas',
-                        'Sem restrição de Idade',
-                        'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
-                        'https://mpago.la/1cg3eWb'
-                        )">
-                         <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" id="img-lupa-dados" alt="">
-                Livro : Boa Noite Para Quem é De Boa Noite</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                        'Candomblé e Suas Essências', /*nome do produto  - produto.nome*/
-                        '39,90' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '146 Páginas',
-                        'Sem restrição de Idade',
-                        'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem',
-                        'https://mpago.la/2sKvWGw'
-                        )">
-                         <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" id="img-lupa-dados" alt="">
-                Livro : Candomblé e Suas Essências</li>
-
-                <li class="dados-lupa"  onclick="adicionarProduto(
-                        '5 Maneiras para Melhorar sua Auto Confiança', /*nome do produto  - produto.nome*/
-                        '00,00' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '16 Páginas',
-                        'Sem restrição de Idade',
-                        'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas \nem sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com  facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.',
-                        '',
-                        )">
-                         <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" id="img-lupa-dados" alt="">  
-                Livro : 5 Maneiras para Melhorar sua Auto Confiança</li>
-    
-                <li class="dados-lupa"  onclick="adicionarProduto(
-                    '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '400 Páginas', /*Quantidade de pagina*/
-                    'Sem restrição de Idade', /*Idade*/
-                    'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
-                    'https://mpago.la/1AuBUt7'
-                    )">
-                         <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
-                Livro : 5 Técnicas para Turbinar a sua Memória</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '400 Páginas', /*Quantidade de pagina*/
-                    'Sem restrição de Idade', /*Idade*/
-                    'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
-                    '',
-                    )">
-                        <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
-                Livro : Fortalecimento Espiritual</li>
-    
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    '5 Passos Para Ter Êxito', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/dtdfQ0G5/exito1.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '104 Páginas',
-                    'Sem restrição de Idade',
-                    'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento  pessoal são atitudes que podem ajudar a superar desafios,  desenvolver habilidades e aumentar a autoconfiança.',
-                    'https://mpago.la/2jLgfcm',
-                    )">
-                        <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" id="img-lupa-dados" alt="">  
-                Livro : 5 Passos Para Ter Êxito Livro 1</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                        '5 Passos Para Ter Êxito Livro 2', /*nome do produto  - produto.nome*/
-                        '29,99' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/9fXgBtKk/exito2.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '80 Páginas',
-                        'Sem restrição de Idade',
-                        'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!'
-                        ,'https://mpago.la/2TdwT66'
-                        )">
-                         <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" id="img-lupa-dados" alt="">  
-                Livro: 5 Passos Para Ter Êxito Livro 2</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'A Felicidade Começa Com Você', /*nome do produto  - produto.nome*/
-                    '29,99 ' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/L6MRRwrF/felicidade1.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '80 Páginas',
-                    'Sem restrição de Idade',
-                    'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado.',
-                    'https://mpago.la/2L3XqGk',
-                    )">
-                    <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" id="img-lupa-dados" alt="">  
-                Livro : A Felicidade Começa Com Você</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'A Felicidade Começa Com Você - Versão 2', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/yx0Hcy3G/felicidade2.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '76 Páginas',
-                    'Sem restrição de Idade',
-                    'Passamos a vida fazendo o nosso melhor para alcançar nossos sonhos e nossos objetivos. Acreditamos que, assim que alcançarmos o sucesso, finalmente estaremos felizes e em paz com o mundo.Isso pode ser verdade. No entanto, o simples fato é que nem todo mundo vai ter sucesso. Apenas uma pequena minoria alcançará o auge da riqueza e do poder. A maioria de nós vai ficar preso vivendo vidas medíocres.',
-                    'https://mpago.la/2mS64aY'
-                    )">
-            <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" id="img-lupa-dados" alt="">  
-                Livro : A Felicidade Começa Com Você - Versão 2</li>
-    
-                <li class="dados-lupa"  onclick="adicionarProduto(
-                        'Administração Do Tempo', /*nome do produto  - produto.nome*/
-                        '19,99' ,/* preço do produto - produto.preço*/
-                        'https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png', /*imagem do produto produto.imagem*/
-                        'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                        '100 Páginas',
-                        'Sem restrição de Idade',
-                        'A maioria das pessoas reclama da falta de tempo que dispõe para suas atividades diárias devido à enorme carga de tarefas que tem para executar.O que ocorre é que as pessoas quando aprendem em um curso acadêmico, ou mesmo ingressam de alguma forma em uma função, profissão, são sempre instruídas sobre “O que” fazer sendo ignorado o modo como se fazer o trabalho, principalmente aos detalhes que fazem o diferencial para se obter uma maior eficiência e eficácia. Não basta ser especialista no que se faz, é que preciso ter noções da melhor maneira de realizar o trabalhor horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!',
-                        'https://mpago.la/1W1x3mC',
-                        )">
-                    <img src="https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png" id="img-lupa-dados" alt="">  
-                Livro: Administração Do Tempo</li>
-    
-                <li class="dados-lupa" onclick="adicionarProduto(
-                '8 Dicas Para Uma Vida Com Propósito', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/jqD99c20/dicas8.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '85 Páginas',
-                'Sem restrição de Idade',
-                'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
-                ,'https://mpago.la/2z25NjS'
-                )">
-                <img src="https://i.postimg.cc/jqD99c20/dicas8.png" id="img-lupa-dados" alt="">  
-                Livro : 8 Dicas Para Uma Vida Com Propósito </li>
-                        
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    '7 Passos Para O Sucesso Pleno', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '100 Páginas',
-                    'Sem restrição de Idade',
-                    'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente'
-                    ,'https://mpago.la/2EfrZt6'
-                    )">
-                     <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" id="img-lupa-dados" alt="">  
-                Livro : 7 Passos Para O Sucesso Pleno</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'Superar a Ansiedade', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/vBkPbRTR/ansiedade.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '85 Páginas',
-                    'Sem restrição de Idade',
-                    'Uma vida livre de ansiedade é atingível e agora você tem todas as ferramentas necessárias para superar sua ansiedade e começar a viver a vida que você merece. Com um pouco de paciência, uma consciência do seu entorno e de si mesmo, e um compromisso de seguir com as lições que aprendeu, você pode estar no caminho de trabalhar e superar os muitos aspectos diferentes de sua condição debilitante.'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" id="img-lupa-dados" alt="">  
-                Livro : Superar a Ansiedade</li>
-
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'A Magia Da Linguagem Corporal', /*nome do produto  - produto.nome*/
-                    '19,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '84 Páginas',
-                    'Sem restrição de Idade',
-                    'Inegavelmente, a comunicação é tão importante quanto a própria vida. Seria inimaginável o quão caótico o mundo seria sem comunicação. Mesmo os povos primitivos tentaram encontrar maneiras de se comunicar quando as coisas eram muito mais simples na altura. Na nossa era moderna e rápida, a necessidade de comunicação é mil vezes superior. Existem várias formas de comunicação. Cada forma é valiosa, a comunicação não-verbal é uma delas.'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png" id="img-lupa-dados" alt="">  
-                Livro : A Magia Da Linguagem Corporal</li>
-
-                
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'Como Se Tornar Um Lider Em Marketing Online', /*nome do produto  - produto.nome*/
-                    '19,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '38 Páginas',
-                    'Sem restrição de Idade',
-                    'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" id="img-lupa-dados" alt="">  
-                Livro : Como Se Tornar Um Lider Em Marketing Online</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    '19 Regras Para Se Tornar Um Vencedor', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '50 Páginas',
-                    'Sem restrição de Idade',
-                    'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
-                Livro : 19 Regras Para Se Tornar Um Vencedor</li>
-
-                <li class="dados-lupa" onclick="adicionarProduto(
-                    'Guia Simplificado Capacitação Financeira', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/h4s39S6k/financeira.png', /*imagem do produto produto.imagem*/
-                    'Editora: EDP Cursos', /*detalhes do produto - produto.infor*/
-                    '44 Páginas',
-                    'Sem restrição de Idade',
-                    'A capacitação financeira é acessível, mesmo se você estiver a começar com nada. O facto é que a maior parte das pessoas não pensa que isso possa acontecer a eles e por isso continuam no mesmo lugar. Uma das coisas mais importantes para materializar as coisas mencionadas neste livro é que você tem quer ter fé em você mesmo.Acredite que você pode fazer a transição. Acredite que você pode dar o salto'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
-                Livro : 19 Regras Para Se Tornar Um Vencedor</li>
-
-            </ul>
-
-        </div>
-    </div>
-  
-     
-    <!--lupa mob-->
-    <article class="config-lupa">
-
-        <div class="fundo-lupa">
-            <i class="bi bi-search" id="lupamob"></i>   
-
-            <input type="text" id="input-lupa" placeholder="O Que Você Procura ?">
-        </div>
-
-        <i class="bi bi-x-circle" id="fechar-busca"></i>
-        
-        <!--DADOS DOS MENUS-->
-         <ul id="listamob">
-   
-            <a href="religião.html"><li class="dados-lupa" id="lista1">Religião</li></a>
-
-            <a href="autoajuda.html"><li class="dados-lupa" id="lista1">Desenvolvimento Social</li></a>
-
-            <a href="gratuitos.html"><li class="dados-lupa">Gratuitos</li></a>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '151 Páginas',
-                'Sem restrição de Idade',
-                'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
-                'https://mpago.la/2xDZikZ'
-                )" >
-                <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-            Livro : Maravilhas da Magia Cigana Livro 1</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '185 Páginas',
-                    'Sem restrição de Idade',
-                    'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
-                    'https://mpago.la/2KhowgS'
-                    )">
-                     <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-            Livro : Maravilhas da Magia Cigana Livro 2</li>
-
-            <li class="dados-lupa"  onclick="adicionarProduto(
-                    'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/JzMp15rh/maravilha3.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '164 Páginas',
-                    'Sem restrição de Idade',
-                    'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
-                    'https://mpago.la/1iSY21W'
-                     )">
-            <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-            Livro : Maravilhas da Magia Cigana Livro 3</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '164 Páginas',
-                    'Sem restrição de Idade',
-                    'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
-                    'https://mpago.la/34fdVnT',
-            )">
-            <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" id="img-lupa-dados" height="80px" width="80px" alt="">
-            Livro : Maravilhas da Magia Cigana Livro 4</li>
-
-            <li class="dados-lupa"   onclick="adicionarProduto(
-                    'Maravilha Da Magia Cigana Livro 5', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/tgmkN0h1/maravilha5.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '181 Páginas',
-                    'Sem restrição de Idade',
-                    'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.',
-                    'https://mpago.la/2oXF1p3',
-            )">
-             <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" id="img-lupa-dados"  alt="">
-            Livro : Maravilhas da Magia Cigana Livro 5</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-               'Maravilha Da Magia Cigana Livro 6', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/x15tqN83/maravilha6.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '173 Páginas',
-                'Sem restrição de Idade',
-                'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
-                'https://mpago.la/1Hdexfm'
-                )">
-                <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" id="img-lupa-dados" alt="">
-            Livro : Maravilhas da Magia Cigana Livro 6</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-            'As Três Marias - Padilha , Mulambo e Quitéria', /*nome do produto  - produto.nome*/
-            '39,99' ,/* preço do produto - produto.preço*/
-            'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png', /*imagem do produto produto.imagem*/
-            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-            '189 Páginas',
-            'Sem restrição de Idade',
-            'Cada vez que eu me envolvo com entidades espirituais eu me encontro mais enquanto pessoa. Entender como seres etéreos agem me traz a certeza da finitude humana, e da infinitude do espírito. Nada somos diante de uma vida tão frágil. Nada podemos diante da grandeza da essência espiritual. Saber que existe uma dimensão paralela à nossa com seres poderosos a nos circundar nos causa um certo pavor, mas por outro lado a segurança de saber que não estamos sozinhos. Que sim, existem seres poderosos que nos cuidam, nos vigiam, mas também nos castiga. E nos castiga com a parcimônia que o tempo não nos dá. Como Maria Quitéria fez, esperando vinte e cinco anos para cumprir a sua promessa. Para nós uma vida, para ela um piscar de olhos em sua essência.',
-            'https://mpago.la/2jzKUwz'
-            )">
-             <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" id="img-lupa-dados" alt="">
-            Livro : As Três Marias</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-            'Kizomba - Cosmogonia Bantu', /*nome do produto  - produto.nome*/
-            '29,99' ,/* preço do produto - produto.preço*/
-            'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
-            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-            '163 Páginas',
-            'Sem restrição de Idade',
-            'Foi com grande satisfação que recebi o convite para prefaciar esta obra, destacando o autor Zezinho França., também sacerdote Tata Zezinho França de Kabilah, (Tawá-Laewsi) como um dos maiores estudiosos na cultura Bantu da atualidade, o mesmo conseguiu em sua obra inserir informações valiosas para a aprendizagem e conhecimento não somente para os praticantes e simpatizantes das religiões de cultura afrodescendentes, mas também como fonte de entendimento e estudo para outras nações, religiões e pessoas em geral.',
-            'https://mpago.la/2uW1Z38'
-            )">
-             <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" id="img-lupa-dados" alt="">
-            Livro : Kizomba - Cosmogonia Bantu</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
-                    '49,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '113 Páginas',
-                    'Sem restrição de Idade',
-                    'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
-                    'https://mpago.la/1cg3eWb'
-                    )">
-                     <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" id="img-lupa-dados" alt="">
-            Livro : Boa Noite Para Quem é De Boa Noite</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    'Candomblé e Suas Essências', /*nome do produto  - produto.nome*/
-                    '39,90' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '146 Páginas',
-                    'Sem restrição de Idade',
-                    'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem',
-                    'https://mpago.la/2sKvWGw'
-                    )">
-                     <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" id="img-lupa-dados" alt="">
-            Livro : Candomblé e Suas Essências</li>
-
-            <li class="dados-lupa"  onclick="adicionarProduto(
-                    '5 Maneiras para Melhorar sua Auto Confiança', /*nome do produto  - produto.nome*/
-                    '00,00' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '16 Páginas',
-                    'Sem restrição de Idade',
-                    'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas \nem sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com  facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.',
-                    '',
-                    )">
-                     <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" id="img-lupa-dados" alt="">  
-            Livro : 5 Maneiras para Melhorar sua Auto Confiança</li>
-
-            <li class="dados-lupa"  onclick="adicionarProduto(
-                '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '400 Páginas', /*Quantidade de pagina*/
-                'Sem restrição de Idade', /*Idade*/
-                'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
-                'https://mpago.la/1AuBUt7'
-                )">
-                     <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
-            Livro : 5 Técnicas para Turbinar a sua Memória</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                '5 Técnicas para Turbinar a  sua Memória', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '400 Páginas', /*Quantidade de pagina*/
-                'Sem restrição de Idade', /*Idade*/
-                'A DES foi extinta pela Lei nº 15.406/2011. Em substituição, foi criada a Nota Fiscal do Tomador de Serviços (NFTS), que deve ser emitida desde o dia 01/09/2011. Para mais informações, acesse aqui.',
-                '',
-                )">
-                    <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" id="img-lupa-dados" alt="">  
-            Livro : Fortalecimento Espiritual</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                '5 Passos Para Ter Êxito', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/dtdfQ0G5/exito1.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '104 Páginas',
-                'Sem restrição de Idade',
-                'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento  pessoal são atitudes que podem ajudar a superar desafios,  desenvolver habilidades e aumentar a autoconfiança.',
-                'https://mpago.la/2jLgfcm',
-                )">
-                    <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" id="img-lupa-dados" alt="">  
-            Livro : 5 Passos Para Ter Êxito Livro 1</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    '5 Passos Para Ter Êxito Livro 2', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/9fXgBtKk/exito2.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '80 Páginas',
-                    'Sem restrição de Idade',
-                    'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!'
-                    ,'https://mpago.la/2TdwT66'
-                    )">
-                     <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" id="img-lupa-dados" alt="">  
-            Livro: 5 Passos Para Ter Êxito Livro 2</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'A Felicidade Começa Com Você', /*nome do produto  - produto.nome*/
-                '29,99 ' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/L6MRRwrF/felicidade1.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '80 Páginas',
-                'Sem restrição de Idade',
-                'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado.',
-                'https://mpago.la/2L3XqGk',
-                )">
-                <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" id="img-lupa-dados" alt="">  
-            Livro : A Felicidade Começa Com Você</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'A Felicidade Começa Com Você - Versão 2', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/yx0Hcy3G/felicidade2.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '76 Páginas',
-                'Sem restrição de Idade',
-                'Passamos a vida fazendo o nosso melhor para alcançar nossos sonhos e nossos objetivos. Acreditamos que, assim que alcançarmos o sucesso, finalmente estaremos felizes e em paz com o mundo.Isso pode ser verdade. No entanto, o simples fato é que nem todo mundo vai ter sucesso. Apenas uma pequena minoria alcançará o auge da riqueza e do poder. A maioria de nós vai ficar preso vivendo vidas medíocres.',
-                'https://mpago.la/2mS64aY'
-                )">
-        <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" id="img-lupa-dados" alt="">  
-            Livro : A Felicidade Começa Com Você - Versão 2</li>
-
-            <li class="dados-lupa"  onclick="adicionarProduto(
-                    'Administração Do Tempo', /*nome do produto  - produto.nome*/
-                    '19,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png', /*imagem do produto produto.imagem*/
-                    'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                    '100 Páginas',
-                    'Sem restrição de Idade',
-                    'A maioria das pessoas reclama da falta de tempo que dispõe para suas atividades diárias devido à enorme carga de tarefas que tem para executar.O que ocorre é que as pessoas quando aprendem em um curso acadêmico, ou mesmo ingressam de alguma forma em uma função, profissão, são sempre instruídas sobre “O que” fazer sendo ignorado o modo como se fazer o trabalho, principalmente aos detalhes que fazem o diferencial para se obter uma maior eficiência e eficácia. Não basta ser especialista no que se faz, é que preciso ter noções da melhor maneira de realizar o trabalhor horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso!',
-                    'https://mpago.la/1W1x3mC',
-                    )">
-                <img src="https://i.postimg.cc/RhJcRNvy/administra-aodotempo.png" id="img-lupa-dados" alt="">  
-            Livro: Administração Do Tempo</li>
-
-            <li class="dados-lupa" onclick="adicionarProduto(
-            '8 Dicas Para Uma Vida Com Propósito', /*nome do produto  - produto.nome*/
-            '29,99' ,/* preço do produto - produto.preço*/
-            'https://i.postimg.cc/jqD99c20/dicas8.png', /*imagem do produto produto.imagem*/
-            'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-            '85 Páginas',
-            'Sem restrição de Idade',
-            'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
-            ,'https://mpago.la/2z25NjS'
-            )">
-            <img src="https://i.postimg.cc/jqD99c20/dicas8.png" id="img-lupa-dados" alt="">  
-            Livro : 8 Dicas Para Uma Vida Com Propósito </li>
+            <!--BLOCO LUPA MOBILE-->
+            <div class="config-lupa">
+            <i class="bi bi-search" id="icone-lupa"></i>
+            </div>
+            <div class="seçao-lupa">
+                <div class="fundo-input">
+                    <input type="text" id="mob-inputpesquisa" placeholder="Pesquisa">
+                    <i class="bi bi-x" id="close-menu-lupa"></i>
+                    <ul class="mob-lupapesquisa" id="listaseçao">
                     
-            <li class="dados-lupa" onclick="adicionarProduto(
-                '7 Passos Para O Sucesso Pleno', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '100 Páginas',
-                'Sem restrição de Idade',
-                'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente'
-                ,'https://mpago.la/2EfrZt6'
-                )">
-                 <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" id="img-lupa-dados" alt="">  
-            Livro : 7 Passos Para O Sucesso Pleno</li>
+                        
+                     
 
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'Superar a Ansiedade', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/vBkPbRTR/ansiedade.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '85 Páginas',
-                'Sem restrição de Idade',
-                'Uma vida livre de ansiedade é atingível e agora você tem todas as ferramentas necessárias para superar sua ansiedade e começar a viver a vida que você merece. Com um pouco de paciência, uma consciência do seu entorno e de si mesmo, e um compromisso de seguir com as lições que aprendeu, você pode estar no caminho de trabalhar e superar os muitos aspectos diferentes de sua condição debilitante.'
-                ,'https://mpago.la/1UVfnri'
-                )">
-                 <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" id="img-lupa-dados" alt="">  
-            Livro : Superar a Ansiedade</li>
+                     <!--DESENVOLVIMENTO-->
+                        
+                     <!--04,90-->
+                       
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '5 Maneiras Para Melhorar Sua Auto Confiança',
+                            '04,90',
+                            'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png',
+                            'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas em sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.'
+                            ,'16 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" width="80px" height="90px">5 Maneiras Para Melhorar Sua Auto Confiança</a>
+                        </li>
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            'Como Se Tornar Um Lider Em Marketing Online',
+                            '04,90',
+                            'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png',
+                            'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias. '
+                            ,'38 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" width="80px" height="90px">Como Se Tornar Um Lider Em Marketing Online
+                        </li>
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            '5 Técnicas Para Turbinar A Sua Memória',
+                            '04,90',
+                            'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png',
+                            'Para revisar um assunto, uma ferramenta muito útil é a aprendizagem espaçada. Este método envolve aprendizado por três blocos de 15 minutos, com dois intervalos de dez minutos entre o recurso atividades de distração. Isso reforça as ideias e exige que você as recupere novamente, exatamente como elas estariam prestes a deixar a memória de curto prazo. A razão pela qual isso parece funcionar tão bem é que permite invadir os mecanismos de aprendizado do cérebro, para que você ensaie fatos e ideias diferentes após o que o cérebro perceberá como um período de ausência.Isso tem o efeito de ensaiar o mesmo assunto várias vezes, em vez de apenas ensaiá-lo uma vez, mas por mais tempo. O resultado é mais religação do cérebro, mais atividade neuroquímica e potenciação mais rápida a longo prazo (uma palavra sofisticada que significa formação de novas conexões dentro do cérebro). A melhor maneira de fortalecer sua memória? Use todos esses métodos diferentes juntos. Aprenda a melhorar seu foco e sua memória de trabalho para melhorar a atenção às informações que você está tentando aprender'
+                            ,'16 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" width="80px" height="90px">5 Técnicas Para Turbinar A Sua Memória
+                        </li>
+
+                    <!--09,90-->
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                        'A Felicidade Começa Com Você Livro 1',
+                        '09,90',
+                        'https://i.postimg.cc/L6MRRwrF/felicidade1.png',
+                        'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado. Sua felicidade começa com você. Se você está em um estado infeliz agora, olhe profundamente dentro de você para obter respostas. Descubra por que você está infeliz e, apartir daí, procure melhorar-se e construir relacionamentos mais positivos com os outros. Aprenda a amar a si mesmo e a se fazer feliz primeiro. Vai ser difícil fazer os outros felizes se você não pode ser feliz mesmo. Faça as escolhas certas e as decisões certas. Comece substituindo seus maus hábitos por positivos. Esforçar-se para ser feliz e aprender como manter essa felicidade diante de provações e tribulações - seu caminho para felizes para sempre acabou de começar.',
+                        '80 paginas',
+                        'https://i.postimg.cc/L66pKdg1/outro.jpg',
+                        'https://i.postimg.cc/L4rmPQJY/smartmockups-lv20m8fi.jpg',
+                        'https://i.postimg.cc/yYmW8CLY/smartmockups-lv20p9oi.jpg',
+                        '5passoparaterexito.png'
+                        )">
+                        <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" width="80px" height="90px">A Felicidade Começa Com Você Livro 1</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            'A Felicidade Começa Com Você - Livro 2',
+                            '09,90',
+                            'https://i.postimg.cc/yx0Hcy3G/felicidade2.png',
+                            'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado. Sua felicidade começa com você. Se você está em um estado infeliz agora, olhe profundamente dentro de você para obter respostas. Descubra por que você está infeliz e, a partir daí, procure melhorar-se e construir relacionamentos mais positivos com os outros.Aprenda a amar a si mesmo e a se fazer feliz primeiro. Vai ser difícil fazer os outros felizes se você não pode ser feliz mesmo.Faça as escolhas certas e as decisões certas. Comece substituindo seus maus hábitos por positivos. Esforçar-se para ser feliz e aprender como manter essa felicidade diante de provações e tribulações - seu caminho para felizes para sempre acabou de começar.',
+                            '76 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                             )">
+                            <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" width="80px" height="90px">A Felicidade Começa Com Você Livro 2</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '5 Passos Para Ter Êxito Livro 1',
+                            '09,90',
+                            'https://i.postimg.cc/dtdfQ0G5/exito1.png',
+                            'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento pessoal são atitudes que podem ajudar a superar desafios, desenvolver habilidades e aumentar a autoconfiança.'
+                            ,'104 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                            <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" width="80px" height="90px">5 Passos Para Ter Êxito Livro 1</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '5 Passos Para Ter Êxito Livro 2',
+                            '09,90',
+                            'https://i.postimg.cc/9fXgBtKk/exito2.png',
+                            'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso'
+                            ,'80 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )">
+                            <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" width="80px" height="90px">5 Passos Para Ter Êxito Livro 2</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            'Superar A Ansiedade',
+                            '09,90',
+                            'https://i.postimg.cc/vBkPbRTR/ansiedade.png',
+                            'A ansiedade pode ser difícil de lidar e, finalmente, pode assumir todos os aspectos da sua vida, a menos que você faça algo a respeito. Embora tenha adquirido mais conhecimento sobre como gerenciar sua ansiedade, não poderá aproveitar os benefícios de superá-la, a menos que comece a praticar as etapas que aprendeu. Comece fazendo o pequeno movimento de incorporar mais diversão, emoção, alegria e entusiasmo em sua vida. Depois de fazer isso, você não olhará mais para trás, porque estará motivado para tornar sua vida melhor e mais feliz.A boa notícia para você é que seu transtorno de ansiedade é tratável e você pode tomar as medidas necessárias para gerenciar seus sintomas e, finalmente, superar sua ansiedade. Ao gerenciar seus pensamentos, entender e aceitar seus sentimentos e incorporar técnicas de atenção e respiração em seus rotina diária, você pode'
+                            ,'85 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                            <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" width="80px" height="90px">Superar a Ansiedade</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '7 Passos Para O Sucesso Pleno',
+                            '09,90',
+                            'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png',
+                            'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente.'
+                            ,'100 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                            <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" width="80px" height="90px">7 Passos Para O Sucesso Pleno</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '8 Dicas Para Viver Uma Vida Com Propósito',
+                            '09,90',
+                            'https://i.postimg.cc/jqD99c20/dicas8.png',
+                            'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
+                            ,'85 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                            <img src="https://i.postimg.cc/jqD99c20/dicas8.png" width="80px" height="90px">8 Dicas Para Viver Uma Vida Com Propósito</a>
+                        </li>
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            '19 Regras Para Se Tornar Um Vencedor',
+                            '09,90',
+                            'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png',
+                            'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
+                            ,'50 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                            <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" width="80px" height="90px">19 Regras Para Se Tornar Um Vencedor</a>
+                        </li>
 
 
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'A Magia Da Linguagem Corporal', /*nome do produto  - produto.nome*/
-                '19,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '84 Páginas',
-                'Sem restrição de Idade',
-                'Inegavelmente, a comunicação é tão importante quanto a própria vida. Seria inimaginável o quão caótico o mundo seria sem comunicação. Mesmo os povos primitivos tentaram encontrar maneiras de se comunicar quando as coisas eram muito mais simples na altura. Na nossa era moderna e rápida, a necessidade de comunicação é mil vezes superior. Existem várias formas de comunicação. Cada forma é valiosa, a comunicação não-verbal é uma delas.'
-                ,'https://mpago.la/1UVfnri'
-                )">
-                 <img src="https://i.postimg.cc/CL86yZxL/smartmockups-luj54smc.png" id="img-lupa-dados" alt="">  
-            Livro : A Magia Da Linguagem Corporal</li>
-
-            
-            <li class="dados-lupa" onclick="adicionarProduto(
-                'Como Se Tornar Um Lider Em Marketing Online', /*nome do produto  - produto.nome*/
-                '19,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '38 Páginas',
-                'Sem restrição de Idade',
-                'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias'
-                ,'https://mpago.la/1UVfnri'
-                )">
-                 <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" id="img-lupa-dados" alt="">  
-            Livro : Como Se Tornar Um Lider Em Marketing Online</li>
 
 
-            <li class="dados-lupa" onclick="adicionarProduto(
-                '19 Regras Para Se Tornar Um Vencedor', /*nome do produto  - produto.nome*/
-                '19,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '50 Páginas',
-                'Sem restrição de Idade',
-                'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
-                ,'https://mpago.la/1UVfnri'
-                )">
-                 <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
-            Livro : 19 Regras Para Se Tornar Um Vencedor</li>
+                       
 
-            <li class="dados-lupa" onclick="adicionarProduto(
-                    'Guia Simplificado Capacitação Financeira', /*nome do produto  - produto.nome*/
-                    '29,99' ,/* preço do produto - produto.preço*/
-                    'https://i.postimg.cc/h4s39S6k/financeira.png', /*imagem do produto produto.imagem*/
-                    'Editora: EDP Cursos', /*detalhes do produto - produto.infor*/
-                    '44 Páginas',
-                    'Sem restrição de Idade',
-                    'A capacitação financeira é acessível, mesmo se você estiver a começar com nada. O facto é que a maior parte das pessoas não pensa que isso possa acontecer a eles e por isso continuam no mesmo lugar. Uma das coisas mais importantes para materializar as coisas mencionadas neste livro é que você tem quer ter fé em você mesmo.Acredite que você pode fazer a transição. Acredite que você pode dar o salto'
-                    ,'https://mpago.la/1UVfnri'
-                    )">
-                     <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" id="img-lupa-dados" alt="">  
-                Livro : 19 Regras Para Se Tornar Um Vencedor</li>
-            
-         </ul>
+                     <!--RELIGIÃO-->
+                        
+                     <!--04,90-->
+                     
 
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            'Fortalecimento Espiritual',
+                            '04,90',
+                            'https://i.postimg.cc/mgy6M6XM/fortalecimento.png',
+                            'Capacitar o espírito é uma ordem muito alta. Ele requer alta disciplina, um quadro específico de espírito e muito sacrifício. Mas quando você atingir o estado, não há muito o que seria de desejar.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )">
+                        <img src="https://i.postimg.cc/mgy6M6XM/fortalecimento.png" width="80px" height="90px">Fortalecimento Espiritual
+                        </li>
+
+                        <!--09,90-->
+
+                        <li class="mob-dadoslupa" onclick="addproduto(
+                            'Boa Noite Para Quem É De Boa Noite',
+                            '09,90',
+                            'https://i.postimg.cc/50RBLwW8/boanoite.png',
+                            'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                        <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" width="80px" height="90px">Boa Noite Para Quem É De Boa Noite
+                        </li>
+
+                        <li class="mob-dadoslupa"   onclick="addproduto(
+                            'Candomblé Em Sua Essência',
+                            '09,90',
+                            'https://i.postimg.cc/MZg48Bfc/candomble.png',
+                            'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                        <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" width="80px" height="90px">Candomblé Em Sua Essência
+                        </li>
+
+                        <li class="mob-dadoslupa"   onclick="addproduto(
+                            'Kizomba Miolo',
+                            '29,99',
+                            'https://i.postimg.cc/fyd8bHSV/kizomba.png',
+                            'Tratar de assuntos tão íngremes quanto PambuN’Jila e a construção do Universo, bem como a cosmogonia segundo os bantus e a instalação deste culto no Brasil requer esforços incomensuráveis. A literatura existente é escassa e esparsa com poucas documentações e muito menores as confiáveis. O que podemos destacar é a importância desta cultura na formação da identidade do país, seja em termos linguísticos, culinária, artes em todos os níveis, seja na música, na arquitetura ou mesmo nas artes plásticas. Um rosário a ser rezado ao estudar as bases da construção do Brasil.O culto Congo-Angola teve seu nascedouro muito antes que todas as outras etnias africanas chegassem ao Brasil. Sim, de modo imberbe, sem estrutura ou liturgia. Mas uma nação com não menos devoção e nostalgia. A saudade das terras além-mar, da choça encantada e das matas e savanas.'
+                            ,'153 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" width="80px" height="90px">Kizomba Miolo
+                        </li>
+
+
+
+                    
+
+
+                        <!--39,99-->
+
+                        <li class="mob-dadoslupa"   onclick="addproduto(
+                            'As Três Marias',
+                            '39,99',
+                            'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png',
+                            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" width="80px" height="90px">As Três Marias 
+                        </li>
+
+                         <!--24,99-->
+
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 1',
+                            '24,99',
+                            'https://i.postimg.cc/CKvPrnVx/maravilha1.png',
+                            'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.'
+                            ,'151 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 1 
+                        </li>
+
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 2',
+                            '24,99',
+                            'https://i.postimg.cc/QtH62NXk/maravilha2.png',
+                            'Este é o segundo volume da obra Maravilhas da Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância na preservação de uma cultura oral, seus sincretismos e sabedorias'
+                            ,'185 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 2 
+                        </li>
+
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 3',
+                            '19,99',
+                            'https://i.postimg.cc/JzMp15rh/maravilha3.png',
+                            'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade.'
+                            ,'164 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )"  >
+                        <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 3
+                        </li>
+
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 4',
+                            '19,99',
+                            'https://i.postimg.cc/bNQ6cBjM/maravilha4.png',
+                            'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita'
+                            ,'164 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 4
+                        </li>
+                        
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 5',
+                            '24,99',
+                            'https://i.postimg.cc/tgmkN0h1/maravilha5.png',
+                            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 5
+                        </li>
+
+                        <li class="mob-dadoslupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 6',
+                            '24,99',
+                            'https://i.postimg.cc/x15tqN83/maravilha6.png',
+                            'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 6
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
 
     </article>
     
-    <!--ATIVAÇÃO DAS NAVEGAÇÕES--> 
- 
+
+    
+   
+
+    <!--LUPA DESKTOP-->
+    <article class="fundo-pesquisa">
+
+        <div class="lupa">
+            <i class="bi bi-search" id="icone-lupadesk"></i>
+        </div>
+        <div class="pesquisa">
+            <input type="text" name="" id="input-pesquisa" placeholder="O que procura">
+        </div> 
+        <ul class="lupa-pesquisa" id="listadesk">
+                
+                    <li class="dados-lupa"><a href="" >Religião</a></li>
+                    <li class="dados-lupa"><a href="" >Desenvolvimento Social e Profissional</a></li>
+                    <li class="dados-lupa"><a href="" >Gratuítos</a></li>
+                    <li class="dados-lupa"><a href="" >Todos</a></li>
+
+        
+                     <!--DESENVOLVIMENTO-->
+                        
+                     <!--04,90-->
+                       
+                        <li class="dados-lupa" onclick="addproduto(
+                            '5 Maneiras Para Melhorar Sua Auto Confiança',
+                            '04,90',
+                            'https://i.postimg.cc/g0GHWzKL/autoconfian-a.png',
+                            'A vida é cheia de desafios e há muitas vezes em que é difícil manter a confiança. Quando isso acontecer, reserve um tempo do dia para sentar e fazer uma lista de todas as coisas em sua vida pelas quais você é grato e todas as coisas que você realizou. Coloque essa lista na porta da geladeira ou em outro lugar onde possa ser vista com facilidade e observe as listas sempre que sua autoconfiança começar a diminuir. Se você sente que tem baixa auto-estima, esses cinco métodos poderosos podem ajudá-lo a se sentir melhor sobre quem você é e para onde está indo.Não deixe que a falta de confiança continue a impedi-lo de alcançar seus objetivos e se tornar a pessoa que sempre sonhou em se tornar.Com um pouco de tempo e esforço, você pode construir sua auto-estima e confiança e começar a viver uma vida mais feliz e saudável.'
+                            ,'16 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/g0GHWzKL/autoconfian-a.png" width="80px" height="90px">5 Maneiras Para Melhorar Sua Auto Confiança</a>
+                        </li>
+                        <li class="dados-lupa" onclick="addproduto(
+                            'Como Se Tornar Um Lider Em Marketing Online',
+                            '04,90',
+                            'https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png',
+                            'Enquanto algumas pessoas têm um poder inato para construir um relacionamento, eles não vão se tornam mestres na arte de criar rendimento, a menos que aprendam um conjunto completo de habilidades.Aqueles que verdadeiramente compreendem a venda como uma habilidade e uma tecnologia e que investem tempo para formular e aperfeiçoar todo o seu conjunto de habilidades de vendas, são as pessoas que vão ter sucesso.Por isso acorde, pois você não vai conseguir sobreviver senão aprender como vender os seus produtos, serviços e ideias. '
+                            ,'38 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/qBz5LDfK/smartmockups-luj55rvp.png" width="80px" height="90px">Como Se Tornar Um Lider Em Marketing Online
+                        </li>
+                        <li class="dados-lupa"  onclick="addproduto(
+                            '5 Técnicas Para Turbinar A Sua Memória',
+                            '04,90',
+                            'https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png',
+                            'Para revisar um assunto, uma ferramenta muito útil é a aprendizagem espaçada. Este método envolve aprendizado por três blocos de 15 minutos, com dois intervalos de dez minutos entre o recurso atividades de distração. Isso reforça as ideias e exige que você as recupere novamente, exatamente como elas estariam prestes a deixar a memória de curto prazo. A razão pela qual isso parece funcionar tão bem é que permite invadir os mecanismos de aprendizado do cérebro, para que você ensaie fatos e ideias diferentes após o que o cérebro perceberá como um período de ausência.Isso tem o efeito de ensaiar o mesmo assunto várias vezes, em vez de apenas ensaiá-lo uma vez, mas por mais tempo. O resultado é mais religação do cérebro, mais atividade neuroquímica e potenciação mais rápida a longo prazo (uma palavra sofisticada que significa formação de novas conexões dentro do cérebro). A melhor maneira de fortalecer sua memória? Use todos esses métodos diferentes juntos. Aprenda a melhorar seu foco e sua memória de trabalho para melhorar a atenção às informações que você está tentando aprender'
+                            ,'16 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/433wc4hk/turbinandosuamemoria.png" width="80px" height="90px">5 Técnicas Para Turbinar A Sua Memória
+                        </li>
+
+                    <!--09,90-->
+                        <li class="dados-lupa" onclick="addproduto(
+                        'A Felicidade Começa Com Você Livro 1',
+                        '09,90',
+                        'https://i.postimg.cc/L6MRRwrF/felicidade1.png',
+                        'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado. Sua felicidade começa com você. Se você está em um estado infeliz agora, olhe profundamente dentro de você para obter respostas. Descubra por que você está infeliz e, apartir daí, procure melhorar-se e construir relacionamentos mais positivos com os outros. Aprenda a amar a si mesmo e a se fazer feliz primeiro. Vai ser difícil fazer os outros felizes se você não pode ser feliz mesmo. Faça as escolhas certas e as decisões certas. Comece substituindo seus maus hábitos por positivos. Esforçar-se para ser feliz e aprender como manter essa felicidade diante de provações e tribulações - seu caminho para felizes para sempre acabou de começar.',
+                        '80 paginas',
+                        'https://i.postimg.cc/L66pKdg1/outro.jpg',
+                        'https://i.postimg.cc/L4rmPQJY/smartmockups-lv20m8fi.jpg',
+                        'https://i.postimg.cc/yYmW8CLY/smartmockups-lv20p9oi.jpg',
+                        '5passoparaterexito.png'
+                        )">
+                        <img src="https://i.postimg.cc/L6MRRwrF/felicidade1.png" width="80px" height="90px">A Felicidade Começa Com Você Livro 1</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            'A Felicidade Começa Com Você - Livro 2',
+                            '09,90',
+                            'https://i.postimg.cc/yx0Hcy3G/felicidade2.png',
+                            'A pessoa feliz não é aquela que não tem problemas. É, na verdade, aquela que escolheu parar de ver ameaças para identificar desafios, aquela que deixou de se culpar pelos erros e resolveu torná-los oportunidades de aprendizado. Sua felicidade começa com você. Se você está em um estado infeliz agora, olhe profundamente dentro de você para obter respostas. Descubra por que você está infeliz e, a partir daí, procure melhorar-se e construir relacionamentos mais positivos com os outros.Aprenda a amar a si mesmo e a se fazer feliz primeiro. Vai ser difícil fazer os outros felizes se você não pode ser feliz mesmo.Faça as escolhas certas e as decisões certas. Comece substituindo seus maus hábitos por positivos. Esforçar-se para ser feliz e aprender como manter essa felicidade diante de provações e tribulações - seu caminho para felizes para sempre acabou de começar.',
+                            '76 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                             )">
+                            <img src="https://i.postimg.cc/yx0Hcy3G/felicidade2.png" width="80px" height="90px">A Felicidade Começa Com Você Livro 2</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            '5 Passos Para Ter Êxito Livro 1',
+                            '09,90',
+                            'https://i.postimg.cc/dtdfQ0G5/exito1.png',
+                            'A busca por autoajuda também é uma prática importante para promover o desenvolvimento pessoal. Ler livros motivacionais, participar de palestras e workshops que promovam o crescimento pessoal são atitudes que podem ajudar a superar desafios, desenvolver habilidades e aumentar a autoconfiança.'
+                            ,'104 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                            <img src="https://i.postimg.cc/dtdfQ0G5/exito1.png" width="80px" height="90px">5 Passos Para Ter Êxito Livro 1</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            '5 Passos Para Ter Êxito Livro 2',
+                            '09,90',
+                            'https://i.postimg.cc/9fXgBtKk/exito2.png',
+                            'Você não precisa passar horas intermináveis todos os dias praticando o processo de visualização criativa. Estas cinco simples técnicas podem ajudá-lo a encontrar o caminho certo para praticar visualização criativa para manifestar todos os seus objetivos e desejos.Para ter sucesso no processo, você precisa adquirir o hábito de praticar diariamente. Visualize-se tendo sucesso'
+                            ,'80 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )">
+                            <img src="https://i.postimg.cc/9fXgBtKk/exito2.png" width="80px" height="90px">5 Passos Para Ter Êxito Livro 2</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            'Superar A Ansiedade',
+                            '09,90',
+                            'https://i.postimg.cc/vBkPbRTR/ansiedade.png',
+                            'A ansiedade pode ser difícil de lidar e, finalmente, pode assumir todos os aspectos da sua vida, a menos que você faça algo a respeito. Embora tenha adquirido mais conhecimento sobre como gerenciar sua ansiedade, não poderá aproveitar os benefícios de superá-la, a menos que comece a praticar as etapas que aprendeu. Comece fazendo o pequeno movimento de incorporar mais diversão, emoção, alegria e entusiasmo em sua vida. Depois de fazer isso, você não olhará mais para trás, porque estará motivado para tornar sua vida melhor e mais feliz.A boa notícia para você é que seu transtorno de ansiedade é tratável e você pode tomar as medidas necessárias para gerenciar seus sintomas e, finalmente, superar sua ansiedade. Ao gerenciar seus pensamentos, entender e aceitar seus sentimentos e incorporar técnicas de atenção e respiração em seus rotina diária, você pode'
+                            ,'85 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                            <img src="https://i.postimg.cc/vBkPbRTR/ansiedade.png" width="80px" height="90px">Superar a Ansiedade</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            '7 Passos Para O Sucesso Pleno',
+                            '09,90',
+                            'https://i.postimg.cc/GmwjXJ8Q/7passopleno.png',
+                            'A motivação não é um passo difícil de dar na vida. Embora em alguns casos você pode se sentir desesperado e privado de tempo, um pequeno empurrão pode virar coisas ao redor. Todos esses aplicativos funcionam apenas para fazer você se sentir confortável e confiante de que há mais coisas que você pode fazer diariamente.'
+                            ,'100 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                            <img src="https://i.postimg.cc/GmwjXJ8Q/7passopleno.png" width="80px" height="90px">7 Passos Para O Sucesso Pleno</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            '8 Dicas Para Viver Uma Vida Com Propósito',
+                            '09,90',
+                            'https://i.postimg.cc/jqD99c20/dicas8.png',
+                            'A maioria das pessoas vê um erro e começa a ter pensamentos negativos. Eles vão se culpar pelo erro e pensar que eram burros demais para terem sucesso por causa dos erros que cometeram.'
+                            ,'85 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                            <img src="https://i.postimg.cc/jqD99c20/dicas8.png" width="80px" height="90px">8 Dicas Para Viver Uma Vida Com Propósito</a>
+                        </li>
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            '19 Regras Para Se Tornar Um Vencedor',
+                            '09,90',
+                            'https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png',
+                            'Em um mundo corporativo altamente competitivo e volátil, é fundamental adotar regras operacionais sólidas para se tornar um vencedor. Seja atuando no mercado de ações, no campo do marketing ou nas áreas de vendas, seguir princípios bem estabelecidos pode fazer toda a diferença entre o sucesso e o fracasso.No mercado de ações, é essencial ter um plano de investimento claro e bem definido. Isso inclui estabelecer metas realistas, diversificar a carteira de investimentos e manter-se informado sobre as tendências do mercado. Além disso, é importante ter disciplina e não se deixar levar pela emoção, evitando decisões impulsivas que possam prejudicar seus ganhos no longo prazo.'
+                            ,'50 Paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                            <img src="https://i.postimg.cc/6QWtDRtx/smartmockups-lun8c2c9.png" width="80px" height="90px">19 Regras Para Se Tornar Um Vencedor</a>
+                        </li>
+
+
+
+
+                       
+
+                     <!--RELIGIÃO-->
+                        
+                     <!--04,90-->
+                     
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            'Fortalecimento Espiritual',
+                            '04,90',
+                            'https://i.postimg.cc/mgy6M6XM/fortalecimento.png',
+                            'Capacitar o espírito é uma ordem muito alta. Ele requer alta disciplina, um quadro específico de espírito e muito sacrifício. Mas quando você atingir o estado, não há muito o que seria de desejar.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )">
+                        <img src="https://i.postimg.cc/mgy6M6XM/fortalecimento.png" width="80px" height="90px">Fortalecimento Espiritual
+                        </li>
+
+                        <!--09,90-->
+
+                        <li class="dados-lupa" onclick="addproduto(
+                            'Boa Noite Para Quem É De Boa Noite',
+                            '09,90',
+                            'https://i.postimg.cc/50RBLwW8/boanoite.png',
+                            'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                        <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" width="80px" height="90px">Boa Noite Para Quem É De Boa Noite
+                        </li>
+
+                        <li class="dados-lupa"   onclick="addproduto(
+                            'Candomblé Em Sua Essência',
+                            '09,90',
+                            'https://i.postimg.cc/MZg48Bfc/candomble.png',
+                            'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força, Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás. Os homens eram numerosos sobre a Terra. Antigamente, como hoje, Muitos deles não eram valentes nem sábios. A memória destes não se perpetuou Eles foram completamente esquecidos; Não se tornaram orixás. Em cada vila, um culto se estabeleceu Sobre a lembrança de um ancestral de prestígio E lendas foram transmitidas de geração em geração para render-lhes homenagem.'
+                            ,'113 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )">
+                        <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" width="80px" height="90px">Candomblé Em Sua Essência
+                        </li>
+
+                        <li class="dados-lupa"   onclick="addproduto(
+                            'Kizomba Miolo',
+                            '29,99',
+                            'https://i.postimg.cc/fyd8bHSV/kizomba.png',
+                            'Tratar de assuntos tão íngremes quanto PambuN’Jila e a construção do Universo, bem como a cosmogonia segundo os bantus e a instalação deste culto no Brasil requer esforços incomensuráveis. A literatura existente é escassa e esparsa com poucas documentações e muito menores as confiáveis. O que podemos destacar é a importância desta cultura na formação da identidade do país, seja em termos linguísticos, culinária, artes em todos os níveis, seja na música, na arquitetura ou mesmo nas artes plásticas. Um rosário a ser rezado ao estudar as bases da construção do Brasil.O culto Congo-Angola teve seu nascedouro muito antes que todas as outras etnias africanas chegassem ao Brasil. Sim, de modo imberbe, sem estrutura ou liturgia. Mas uma nação com não menos devoção e nostalgia. A saudade das terras além-mar, da choça encantada e das matas e savanas.'
+                            ,'153 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" width="80px" height="90px">Kizomba Miolo
+                        </li>
+
+
+
+                    
+
+
+                        <!--39,99-->
+
+                        <li class="dados-lupa"   onclick="addproduto(
+                            'As Três Marias',
+                            '39,99',
+                            'https://i.postimg.cc/Y2Ln8SDt/tresmaria.png',
+                            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/Y2Ln8SDt/tresmaria.png" width="80px" height="90px">As Três Marias 
+                        </li>
+
+                         <!--24,99-->
+
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 1',
+                            '24,99',
+                            'https://i.postimg.cc/CKvPrnVx/maravilha1.png',
+                            'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.'
+                            ,'151 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                            )" >
+                        <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 1 
+                        </li>
+
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 2',
+                            '24,99',
+                            'https://i.postimg.cc/QtH62NXk/maravilha2.png',
+                            'Este é o segundo volume da obra Maravilhas da Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância na preservação de uma cultura oral, seus sincretismos e sabedorias'
+                            ,'185 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 2 
+                        </li>
+
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 3',
+                            '19,99',
+                            'https://i.postimg.cc/JzMp15rh/maravilha3.png',
+                            'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade.'
+                            ,'164 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )"  >
+                        <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 3
+                        </li>
+
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 4',
+                            '19,99',
+                            'https://i.postimg.cc/bNQ6cBjM/maravilha4.png',
+                            'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita'
+                            ,'164 paginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 4
+                        </li>
+                        
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 5',
+                            '24,99',
+                            'https://i.postimg.cc/tgmkN0h1/maravilha5.png',
+                            'A cultura cigana tem sido objeto de fascinação e mistério ao longo da história. Caracterizada por suas tradições distintas e estilo de vida nômade, a cultura cigana possui uma rica variedade de símbolos que desempenham um papel significativo em suas práticas místicas e cotidianas. Neste ensaio, exploraremos as simbologias presentes na cultura cigana, tendo em mente a importância da magia e dos simbolismos para esse grupo étnico.É importante ressaltar que a cultura cigana não é homogênea, uma vez que é composta por diferentes grupos que variam em costumes e tradições específicas. No entanto, é possível encontrar símbolos comuns que são reverenciados em várias comunidades ciganas ao redor do mundo.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/tgmkN0h1/maravilha5.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 5
+                        </li>
+
+                        <li class="dados-lupa"  onclick="addproduto(
+                            'Maravilha Da Magia Cigana Livro 6',
+                            '24,99',
+                            'https://i.postimg.cc/x15tqN83/maravilha6.png',
+                            'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.'
+                            ,'181 Páginas',
+                            '',
+                            '',
+                            '',
+                            ''
+                        )" >
+                        <img src="https://i.postimg.cc/x15tqN83/maravilha6.png" width="80px" height="90px">Maravilha Da Magia Cigana Livro 6
+                        </li>
+               
+
+                <script>
+                    /*lupa desktop*/
+                    let fundolupa = document.querySelector('.fundo-pesquisa');
+                    let inputlupa = document.querySelector('#input-pesquisa');
+    
+                    inputlupa.addEventListener('input', function(){
+                    fundolupa.classList.add('ativar-lupa')
+                    });
+    
+                    inputlupa.addEventListener('click', function(){
+                    fundolupa.classList.remove('ativar-lupa')
+                    });
+    
+                    const pesquisainput = document.getElementById('input-pesquisa');//Barra de Pesquisa
+                    const produtoinput  = document.getElementById('listadesk').getElementsByTagName('li'); //Lista + Dados
+                    
+                    pesquisainput.addEventListener('input',function(){
+                    const pesquisaterminal = pesquisainput.value.toLowerCase();
+    
+                    for (let i = 0; i < produtoinput.length; i++){
+                        const produtonome = produtoinput[i].innerText.toLowerCase();
+                        if (produtonome.includes(pesquisaterminal)){
+                            produtoinput[i].style.display = 'block'; 
+                        } else{
+                            produtoinput[i].style.display = 'none';
+                        }};
+                    });
+                </script>
+        </ul>
+
+    </article>
+
 </header>
+    
+    <section>
 
-<div class="produto-detalhes" id="produto-detalhes">
+    <article class="produto-detalhes">
 
-    <div class="produto-imagem" id="produto-imagem">
-            <img class="imagem-produto" id="imagem-produto" src="" alt="Produto"> <!--imagem-->
+    <div class="fundo-imagem" id="fundo-imagem">
+                <img class="imagem-produto" id="imagem-produtomob" src="" alt="Produto">
+    </div>
+
+<div class="seçao-desk" id="seçao-desk">
+
+    <div class="fundo-produto" id="fundo-produto">
+        <span class="product-name" id="product-name"></span>
+    </div>
+
+    <div class="fundo-preço" id="fundo-preço">
+
+        <div class="fundo-preçodireito">
+            <p id="texto-formapag">Forma de Pagamento:</p>
+            <p id="texto-pag">Pix , Débito e Crédito</p>
+        </div>
+
+        <div class="fundo-preçoesquerdo">
+            <p id="de">De<span class="valor-antigo" id="valor-antigo"></span></p>
+            <p id="apenas">Por<span class="product-price"></span></p>
+            <span class="price-parcela" id="price-parcela">Super Promoção</span>
+        </div>
+
+        <div class="fundo-comprar">
+            <button id="btn-comprar">Adquirir E-book</button>
+        </div>
+
+    </div>
+
+    <div class="fundo-icones" id="fundo-icones">
+        <i class="bi bi-journals" id="produto-infor"><span class="produto-infor" id="produto-quantidade"></span></i><!-- quantidade de pagina-->
+
+        <i class="bi bi-person-bounding-box" id="produto-infor"><span class="produto-idade" >Sem restrição de Idade</span></i><!--idade-->
+
+        <i class="bi bi-journal-text" id="produto-infor"><span class="produto-infor" >Formato Ebook</span></i><!--formato-->
+
+        <i class="bi bi-globe-europe-africa"  id="produto-infor"><span class="produto-infor">Idioma Brasileiro</span></i>
     </div>
     
+</div>
+  
+    <div class="fundo-sinopse" id="fundo-sinopse">
 
-    <div class="quadrante" id="quadrante">
-        <div class="titulo-produto" id="titulo-produto">
-            <span class="product-name"></span><!--titulo-->
-        </div>
-            
-        <div class="preço-produto" id="preço-produto">
-            
-            <div class="detalhe1" id="detalhe1">
-                <span class="produto-marca" id="produto-marca"><i class="bi bi-journal" id="cadeado"></i></span><!--Editora-->
-                <span class="produto-seguro"><i class="bi bi-file-lock-fill" id="cadeado"></i>Compra 100% Segura</span>
-            </div>
-        
-            
-            <div class="detalhe2" id="detalhe2">
-                <span class="product-price" id="product-price"></span><!--preço-->
-                <span class="produto-comprar" id="produto-comprar" >Adquirir Ebook</span><!--comprar-->
-                
-                <span class="forma-pagamento" id="forma-pagamento"></span>
-            </div>
-        
-            
-            <div class="detalhe-produto" id="detalhe-produto">
-                <i class="bi bi-journals" id="produto-infor"><span class="produto-infor" id="produto-quantidade"></span></i><!-- quantidade de pagina-->
-                <i class="bi bi-person-bounding-box" id="produto-infor"><span class="produto-idade" ></span></i><!--idade-->
-                <i class="bi bi-journal-text" id="produto-infor"><span class="produto-infor" >Formato Ebook</span></i><!--formato-->
-                <i class="bi bi-globe-europe-africa"  id="produto-infor"><span>Idioma Brasileiro</span></i>
-            </div>
+                <p id="titulo-sinopse">Sinopse</p>
+          
+                <p class="product-sinopse"></p>
 
-        </div>
-            
-            <div class="descriçao-produto">
-                <h2>Descrição</h2>
-            
-                <span class="descriçao"><!--descrição--></span>
-            
-            </div>
-           
-            
+    </div>
+
+    <div class="fundo-subimagens" id="fundo-subimagens">
+        <img src="" alt="" id="imagem-ebook" class="book-1">
+        <img src="" alt="" id="imagem-ebook" class="book-2">
+        <img src="" alt="" id="imagem-ebook" class="book-3">
+        <img src="" alt="" id="imagem-ebook" class="book-4">
     </div>
 
    
-<script>
-
-const material = document.querySelector('.fundo-pagamento');
-const clique = document.querySelector('.produto-comprar')
-const pagamentofechar = document.querySelector('.close');
-
-clique.addEventListener('click', ()=>{
-    window.location.href = 'aprovado.html';
-})
-
-</script>  
-
-<article class="produto-categoria" id="categoria-produto">
-
-    <!--Nome Categoria-->
-    <h2 id="nome-categoria"> Outros Livros</h2>
-    <hr id="linha">
-
-</article>
-    
-<section class="fundo-produtos" id="fundo-produtosmob">
-
-        <!--bloco produto-->
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/50RBLwW8/boanoite.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Boa Noite Para<br>Quem é De Boa Noite </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$39,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Boa Noite Para Quem é De Boa Noite ', /*nome do produto  - produto.nome*/
-                '39,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/50RBLwW8/boanoite.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '113 Páginas',
-                'Sem restrição de Idade',
-                'Tata Zezinho França do Kabilah não é o que se pode chamar de “Pai de Santo”. Apesar de seus quase quarenta anos de iniciação e quase trinta como Egbòn, ou seja, de ter recebidos os direitos de ser sacerdote. Mas não se pode dizer que não seja um sacerdote. Sim, é. Mas não um daqueles que como nós dedicam a sua vida à Casa, Ègbè de Santo ou aos cuidados dos yawòs, filhos de Santo. É antes um intelectual. Um profundo conhecedor da religião em todos os sentidos. Dedicou à sua vida acadêmica e mesmo dentro da religião afrodescendente a desvendar os segredos e caminhos mais antigos deste culto tão vilipendiado pelos séculos de preconceito.O que me surpreende neste homem das ciências é o respeito que trata todas as ideias e caminhos que a religiosidade se propõe. E vemos isto em seus livros. Desde O Candomblé e a Bíblia, onde de',
-                )">Comprar</button>
-                
-        </div>
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/MZg48Bfc/candomble.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Candomblé em sua Essência</h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$39,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Candomblé em sua Essência ', /*nome do produto  - produto.nome*/
-                '39,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/MZg48Bfc/candomble.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '146 Páginas',
-                'Sem restrição de Idade',
-                'Antigamente, os orixás eram homens. Homens que se tornaram orixás por causa de seus poderes. Homens que se tornaram orixás por causa de sua sabedoria. Eles eram respeitados por causa de sua força,Eles eram venerados por causa de suas virtudes. Nós adoramos sua memória e os altos feitos que realizaram. Foi assim que estes homens tornaram-se orixás.Os homens eram numerosos sobre a Terra.Antigamente, como hoje, Muitos deles não eram valentes nem sábios.',
-                )">Comprar</button>
-                
-        </div>
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/mgy6M6XM/fortalecimento.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Fortalecimento Espiritual</h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">Gratuito</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Fortalecimento Espiritual', /*nome do produto  - produto.nome*/
-                '00,00' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/mgy6M6XM/fortalecimento.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '173 Páginas',
-                'Sem restrição de Idade',
-                'É maravilhoso quando podemos mergulhar no universo de um povo que acumulou tanta sabedoria pelo decorrer de sua história. E falamos de uma história de sofrimentos, alijamentos e diásporas. Os ciganos pelo seu modo de viver foram vilipendiados em todos os lugares onde estiveram ou passaram. Foram expulsos de diversos países, foram injustiçados, sofreram perseguições e genocídios, como no holocausto nazista, onde as vítimas ciganas se equiparam aos judeus assassinados por aquele sistema nefasto.Mas sobreviveram, não somente no Brasil, mas em todo o mundo. Com seus idiomas, suas etnias, sua cultura e sabedoria. Um povo valente, alegre e sempre disposto a sobreviver.',
-                )">Comprar</button>
-                
-        </div>
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/fyd8bHSV/kizomba.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Kizomba miolo </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$29,99</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Kizomba Miolo', /*nome do produto  - produto.nome*/
-                '29,99' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/fyd8bHSV/kizomba.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '151 Páginas',
-                'Sem restrição de Idade',
-                'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
-                )">Comprar</button>
-    
-        </div>
-    
+    </article>
+    </section>
 
 
 
 
+  
+    <main class="mainmob">
+        <article class="fundo-carrosel" id="fundo-carrossel">
+
+            <div class="mySlides fade" id="slidemob">
+                <img src="https://i.postimg.cc/HnFtDbST/banner1.jpg" class="img-slideshow" id="img-slideshow">
+            </div>
         
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/CKvPrnVx/maravilha1.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Maravilha Da Magia Cigana Livro 1 </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$49,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Maravilha Da Magia Cigana Livro 1', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/CKvPrnVx/maravilha1.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '151 Páginas',
-                'Sem restrição de Idade',
-                'Ao concluir esta primeira obra de uma coleção tão importante, a alegria de poder compendiar tantas sabedorias milenares nos dão uma alegria incomensurável. É claro que, apesar dos dez livros desta coletânea não conseguiremos trazer toda esta sabedoria tão linda. Afinal, são milênios de informações acumuladas. E sabemos que a sabedoria cigana não é escrita, e quando o é, são destruídas a cada mudança da caravana. Justamente para se preservar sua integridade.',
-                )">Comprar</button>
-    
-        </div>
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/QtH62NXk/maravilha2.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Maravilha Da Magia Cigana Livro 2 </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$49,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Maravilha Da Magia Cigana Livro 2', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/QtH62NXk/maravilha2.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '185 Páginas',
-                'Sem restrição de Idade',
-                'Este é o segundo volume da obra Maravilhas da  Magia Cigana. Como dito no primeiro tomo, é fruto de estudos e pesquisas da equipe do Institutzo AWETO, e tem por finalidade o resgate e divulgação desta sabedoria milenar e tão importante. Entender estas crenças e culturas é de grande importância  na preservação de uma cultura oral, seus sincretismos e sabedorias',
-                )">Comprar</button>
-          
-        </div>
-    
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/JzMp15rh/maravilha3.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Maravilha Da Magia Cigana Livro 3 </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$49,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Maravilha Da Magia Cigana Livro 3', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/JzMp15rh/maravilha3.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '164 Páginas',
-                'Sem restrição de Idade',
-                'Ciganos são um povo nômade cuja história é marcada por resistência e perseguição ao longo dos séculos. O estigma associado aos ciganos é resultado de preconceitos enraizados na sociedade, muitas vezes perpetuados por discursos preconceituosos e estereótipos negativos. No entanto, apesar das adversidades enfrentadas, os ciganos desenvolveram uma cultura rica e única, que inclui elementos místicos, como magia e espiritualidade',
-                )">Comprar</button>
-          
-        </div>
-     
-        <div class="bloco" id="bloco">
-            <img src="https://i.postimg.cc/bNQ6cBjM/maravilha4.png" class="img-fundo" id="img-fundomob">
-            <h2 class="produto-titulo" id="produto-titulo">Maravilha Da Magia Cigana Livro 4 </h2>
-            <p class="desconto-produto" id="desconto-produto">Categoria  Religiosos</p>
-            <p class="produto-preço" id="produto-preço">R$49,90</p>
-            <button class="botao-compra" id="botao-compra"   onclick="adicionarProduto(
-                'Maravilha Da Magia Cigana Livro 4', /*nome do produto  - produto.nome*/
-                '49,90' ,/* preço do produto - produto.preço*/
-                'https://i.postimg.cc/bNQ6cBjM/maravilha4.png', /*imagem do produto produto.imagem*/
-                'Editora: Instituto Aweto', /*detalhes do produto - produto.infor*/
-                '164 Páginas',
-                'Sem restrição de Idade',
-                'Estudo dos ciganos teve início no século XV, quando as primeiras tribos surgiram na Europa. No entanto, foi apenas no século XIX que a gitanologia foi reconhecida como um ramo da etnologia, com o objetivo de estudá-los em todos os aspectos, principalmente em relação às suas origens. Em Campinas, atualmente residem cerca de 4 mil ciganos. É importante ressaltar que eles não gostam de ser comparados aos hippies, pois consideram que a vida nômade e a busca por fugir dos padrões do sistema são características próprias dos ciganos. Essa comparação os irrita.',
-                )">Comprar</button>
-                
-        </div>
-    
-    
-    
-</section>
-   </div> 
-   
-    <!--FINAL-->
-    <footer class="footer">
-        <!--Redes Sociais-->
-        <article class="redes" id="redes">
-            <i class="bi bi-whatsapp" id="imagem-redes">11 93498-3223</i>
-            <i class="bi bi-facebook" id="imagem-redes"> Aweto Instituto</i>
-            <i class="bi bi-instagram" id="imagem-redes"> @awetoinstituto</i>
-        </article>
-        <!--Dados Empresáriais-->
-        <article class="fundo-texto" id="fundo-texto">
-    
-            <div class="infor-final" id="infor-final">
-            FALE CONOSCO:<br>
-            <br>
-            +55 11 93498-3223<br>       
-            <br> 
-            institutoaweto@aweto.com.br
+            <div class="mySlides fade" id="slidemob">
+                <img src="https://i.postimg.cc/MZL5Q8zg/banner2.jpg" class="img-slideshow" id="img-slideshow">
             </div>
-    
-            <div class="infor-final" id="infor-final">
-            Conheça Nossas Redes Sociais :<br>
-            <i class="bi bi-whatsapp" id="logo-redes"></i>
-            <i class="bi bi-facebook" id="logo-redes"></i>
-            <i class="bi bi-instagram" id="logo-redes"></i>
+        
+            <div class="mySlides fade" id="slidemob">
+                <img src="https://i.postimg.cc/VN4Bsx7G/banner3.jpg" class="img-slideshow" id="img-slideshow">
             </div>
-    
-            <div  class="mod-final" id="mod-final">
-                Copyright © 2024 Aweto Ecommerce, todos os direitos reservados. Instituto Aweto Brasileira . Inscrição estadual 
-                nº : 00019  CNPJ/MF sob o nº: 05.129.635/0001-07 . 
-                CEP: 09.332-550 , São Paulo                
-            </div>
-    
-             
-        </article>
-    </footer>
 
-    <script src="scriptJS/script.js"></script>
-    <script src="scriptJS/produto.js"></script>
-    <script src="scriptJS/unico.js"></script>
+            
+            <div class="mySlides fade" id="slidemob">
+                <img src="https://i.postimg.cc/VN4Bsx7G/banner3.jpg" class="img-slideshow" id="img-slideshow">
+            </div>
+        
+            
+
+            <script>
+                // ATIVAÇÃO DO CARROSSEL
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        function addcarro(){
+          const titulocarro = document.querySelector(".titulo-produto-carrinho");
+          const titulobloco = document.querySelector(".titulo-produto")
+          
+          document.getElementById('titulo-produto-carrinho').innerHTML = 'titulobloco'
+        }
+            </script>
+        </article>
+
+        <section class="fundo-produtos">
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+
+            <div class="bloco" id="blocomob" >
+                <img src="5passoparaterexito.png" alt="" id="img-produto">
+                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
+                <p id="autor-produto" >Leonardo Alvarenga</p>
+                <p id="preço-produto" >R$ 38,00</p>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="js/unico.js"></script>
+    <script src="js/header.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
