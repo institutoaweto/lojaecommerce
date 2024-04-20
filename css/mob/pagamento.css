@@ -18,9 +18,10 @@ body{
     justify-content:space-between;
     align-items: normal;
     background-color: #0c212d;
-    height: 240px;
+    height: 90px;
     width: 100%;
     margin: 0;
+
 }
 
 /* menu desativado */
@@ -33,7 +34,8 @@ body{
     padding: 10px;
     margin: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
+    background-color:#0c212d;
 }
 #icone-menu,.config-logo,.config-lupa{
     transform: translateY(-20px);
@@ -53,8 +55,7 @@ config-menu - configuração do icone menu
     align-items: center;
     font-size: 35px;
     color: white;
-    padding: 20px;  
-
+    padding: 20px;
 }
 .config-menu{
     z-index: 2;
@@ -344,53 +345,136 @@ width: 100%;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a{
-    text-decoration: none;
-    color: black;
+.mainvenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+}
+.texto-pagamento{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#titulopagamento{
+    font-size: 23px;
+    font-weight: bold;
+}
+#produto-pagamento{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0c212d;
+    text-align: center;
+    width: 90%;
 }
 
+.produto-detalhes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-#fundo-pesquisa{
+.product-name{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 23px;
+    font-weight: bold;
+    color: #0794d3;
+}
+.product-price{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    color: #0c212d;
     padding: 10px;
-    margin-top: 0px;
-    background-color: transparent;
-    overflow: hidden;
-    color:white;
-    transition: .2s;
 }
-#pesquisa-principal{
-    font-size: 18px;
+.imagem-produto{
+    height: 280px;
+    padding: 18px;
+}
+
+.pagamento-final{
+    width: 70%;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #0794d3;
+    color: white;
+    border-radius: 25px;
+
+}
+.pagamento-final:hover{
+    background-color: #0c212d;
+}
+
+
+
+
+
+
+
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgb(229, 229, 229);
+}
+#titulo-duvidas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+#titulo-icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    width: 100%;
+    color: green;
+}
+#contato-duvidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+#fale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    outline: 0;
+    border: 0;
     padding: 15px;
-    min-width: 90%;
-    border-radius: 60px;
-    background-color: white;
-    color: black;
+    background-color: #0794d3;
+    color: white;
 }
-
-
-
+#fale:hover{
+    background-color: #0c212d;
+}

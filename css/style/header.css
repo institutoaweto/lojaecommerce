@@ -33,7 +33,6 @@ header{
     background-color: #0c212d;
     color: white;
     top: 0;
-
 }
 
 #logodesk{  
@@ -54,14 +53,7 @@ a{
     color: black;
 }
 
-.fundo-logo{
-    display: flex;
-    background-color: red;
-}
-.logodesk{
-    display: flex;
-    height: 50px;
-}
+
 
 
 

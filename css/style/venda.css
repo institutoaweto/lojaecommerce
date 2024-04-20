@@ -1,0 +1,258 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*DESATIVAR PARA DESKTOP*/
+.menu, #header-sub, #header-sup,
+#logomob,.config-menu,.fundo-inputmob,.lupa-pesquisamobum,
+.fundo-pesquisa,.lupa-pesquisa,.dados-lupamobum,.mob-dadoslupa{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Cabeçalho*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: #0c212d;
+    color: white;
+    top: 0;
+}
+
+#logodesk{  
+    height: 70px;
+    width: 80px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+#dados-menu{
+    margin-left: 50px;
+    color: white;
+}
+
+/*LUPA ORIGINAL*/
+
+.fundo-pesquisa{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #071a25;
+    width: 30%;
+    height: 40%;
+    overflow:hidden;
+    padding: 10px;
+}
+.ativar-lupa{
+    display: flex;
+
+    flex-wrap: wrap;
+    background-color: #071a25;
+    width: 30%;
+    height: 300px;
+    transform: translateY(120px);
+    padding: 5px;
+}
+
+.lupa{
+    display: flex;
+    font-size: 26px;
+
+}
+.bi-search{
+    font-size: 26px;
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    width: 90%;
+    margin-left: 15px;
+
+}
+#input-pesquisa{
+    display: flex;
+    width: 100%;
+    font-size: 22px;
+    padding: 5px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+
+.lupa-pesquisa{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   overflow-y: scroll;
+   cursor: pointer;
+}
+.dados-lupa{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+    list-style: none;
+    color: black;
+    top: 0;
+    transform: translateX(-35px) translateY(0px);
+}
+.dados-lupamobum:hover
+,.dados-lupa:hover{
+    background-color: #0794d3;
+    color: white;
+}
+
+
+
+
+.mainvenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    background-color: #0c212d;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    padding:25px;
+    width: 70%;
+    justify-content: space-evenly;
+    border: 2px solid #0794d3;
+    background-color: #0c212d;
+}
+#nome,#email,#tel,#pedido-envio,#preço-envio{
+    margin-top: 25px;
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+    transition: 0.5s;
+}
+#pedido-envio,#preço-envio{
+    display: none;
+}
+#nome:focus,
+#email:focus,
+#tel:focus{
+    transition: 0.5s;
+    font-size: 23px;
+    padding: 10px;
+}
+#btn{
+    margin-top:20px;
+    width: 30%;
+    font-size: 30px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: #0794d3;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#btn:hover{
+    border-top: 8px solid #0794d3;
+    border-bottom: 8px solid #0794d3;
+    border-left: 12px solid #0794d3;
+    border-right: 12px solid #0794d3;
+    background-color: #0c212d;
+}
+
+#titulo-cadastro{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+#texto-cadastro{
+    width: 80%;
+    margin: 0;
+    transform: translateY(-15px);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(229, 229, 229);
+}
+#titulo-duvidas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+#titulo-icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    width: 100%;
+    color: green;
+}
+#contato-duvidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+#fale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    outline: 0;
+    border: 0;
+    padding: 15px;
+    border-radius: 60px;
+    background-color: #0794d3;
+    color: white;
+}
+#fale:hover{
+    background-color: #0c212d;
+}
