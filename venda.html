@@ -984,20 +984,23 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_subject" value="Novo Pedido !">
-            <input type="hidden" name="_next" value="https://sitefalcon.github.io/awetoofc/pagamento.html">
-          
+            <input type="hidden" name="_next" value="https://lojainstitutoaweto.com.br/venda.html">
             <textarea name="Pedido" id="pedido-envio" ></textarea>
         
             <textarea name="Preço" id="preço-envio" ></textarea>
             <button type="submit"  id="btn" class="link-pagamento">Enviar</button>
 
         </form>  
+        <div class="pagar">
+            <p id="titulo-pagar">Após o preenchimento do formulário, faça o Pagamento para Adquirir o seu E-book. </p>
+            <button id="fazer-pagamento">Fazer o pagamento</button>
+        </div>
 
 
         <script>
   
-            let button = document.getElementById('btn');
-            btn.addEventListener('click', function(){
+            let button = document.getElementById('fazer-pagamento');
+            button.addEventListener('click', function(){
                 window.location.href = 'pagamento.html'
             })
             

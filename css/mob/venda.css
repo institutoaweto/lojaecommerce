@@ -401,6 +401,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     display: flex;
     padding: 0px;
@@ -467,6 +468,9 @@ a{
     text-align: center;
     font-weight: bold;
     color: white;
+}
+#fazer-pagamento{
+    width: 100%;
 }
 
 .section{
