@@ -72,7 +72,7 @@ width: 100%;
     align-items: center;
     width: 100%;
     padding: 0;
-    transform: translateY(10px);
+    transform: translateY(30px);
 }
 #icone-fechar-menu{
     display: flex;
