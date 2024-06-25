@@ -101,6 +101,24 @@
     #fim-categoria:hover{
         background-color: #0c212d;
     }
+
+    .fundo-categoriabolha{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #bloco-bolha{
+        display: flex;
+        width: 50%;
+        margin-top: -100px;
+    }
+    #img-bolha{
+        transform: scale(0.6);
+    }
+    #texto-bolinha{
+    transform: translateY(-50px);
+    }
 }
 
 @media (max-width:570px){
@@ -115,6 +133,7 @@
         padding: 15px;  
         margin-left: 5px;
     }
+    
 }
 @media (max-width:470px){
     #blocomob{

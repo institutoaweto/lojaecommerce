@@ -1,0 +1,26 @@
+.fundo-categoriabolha{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+}
+
+#img-bolha{
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+}
+#link-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+ 
+}
+#texto-bolinha{
+    margin-top: -20px;
+    font-size: 23px;
+    color: #0c212d;
+    text-align: center;
+}
