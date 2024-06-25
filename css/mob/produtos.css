@@ -119,6 +119,9 @@
     #texto-bolinha{
     transform: translateY(-50px);
     }
+    .religiao-img{
+        margin-top: -50px;
+    }
 }
 
 @media (max-width:570px){
