@@ -1,0 +1,453 @@
+main{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+transform: translateY(100px);
+}
+     
+
+
+/*//////// CARROSSEL DE BANNERS //////// */
+.fundo-carrossel{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.mySlides{
+    width: 100%;
+}
+
+#img-slideshow{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+/*//////// CARROSSEL DE PRODUTOS //////// */
+
+.fundo-produtoscampanhas{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    margin: -0px;
+    background-color:#031620;
+    padding: 10px;
+    width: 100%;
+    transform: translateY(-200px);
+}
+
+.menu-blococampanhas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border-bottom: 2px solid #FBB03B;
+    padding: 1rem;
+}
+
+#texto-menucampanhas{
+    font-size: 20px;
+    color: white;
+}
+
+.passe{
+    display: flex;
+    font-size: 40px;
+    color: white;
+}
+
+#setas-volta{
+    margin-left: -60px;
+    display: none;
+}
+
+#setas-volta,
+#setas-frente{
+    cursor: pointer;
+}
+
+#setas-volta:hover,
+#setas-frente:hover{
+    color: #FBB03B;
+}
+
+.seçao-blococampanhas{
+    display: flex;
+    justify-items:left;  
+ transform: translateX(-610px);
+}
+
+.animação-voltar{
+    display: flex;
+    animation: ir 2s ease-in-out;
+    animation-fill-mode:both;
+}
+
+.animação-voltarout{
+    animation: voltar 2s ease-in-out;
+}
+
+@keyframes ir {
+    100%{
+        transform: translateX(630px);
+    }
+}
+
+@keyframes voltar {
+    100%{
+    transform: translateX(-700px);
+    }    
+}
+
+
+/*////////////// BLOCO DE PRODUTOS ///////*/
+
+.blococampanhas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin-left: 75px;
+    margin-top: 25px;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    padding: 25px;
+    color: white;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
+ }
+#titulo-produtocampanhas{
+    display: flex;
+    flex-direction: left;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 15px;
+}
+ #autor-produtocampanhas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: #FBB03B;
+    font-weight: bold;
+    padding: 0px;
+    font-size: 11px;
+    margin-top: -0px;
+ }
+
+ #preço-produtocampanhas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    font-size: 23px;
+    color: #FBB03B;
+    font-weight: bold;
+ }
+#img-produtocampanha{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    border: 15px;
+    border-radius: 10%;
+    border: 1px solid white;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+#img-produtocampanha:hover{
+    transform: scale(1.2);
+    transition: 0.8s;
+    border-radius:0px ;
+    border: 0px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
+}
+
+
+
+/*////////////// RELÓGIO ///////*/
+
+:root {
+    --smaller: .75;
+}
+
+span{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.fundo-relogio{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #0C212D;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(-200px);
+}
+
+.texto-relogio{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#fundo-contagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lista-contagem{
+    display: inline-block;
+    font-size:14px;
+    list-style-type: none;
+    padding: 1em;
+    margin-left: 10px;
+    text-transform: uppercase;
+    background-color: #0794D3;
+    color: white;
+    transform: translateX(-20px);
+}
+
+#lista-contagem:hover{
+    background-color: #FBB03B;
+    color: black;
+}
+
+#days,#hours,#minutes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+li {
+    font-size: calc(1.125rem * var(--smaller));
+}
+  
+li span {
+    font-size: calc(3.375rem * var(--smaller));
+}
+
+
+
+
+/*////////////// CAMPANHA ///////*/
+.fundo-campanha{
+    display: flex;
+
+    justify-content: space-evenly;
+    transform: translateY(-200px);
+    background-color: #0C212D;
+    width: 100%;
+    height: 600px;
+}
+.bloco-campanha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+     width: 250px;
+     height: 460px;
+     padding: 10px;
+     border-radius: 40px;
+     border-bottom: 2px solid white;
+     border-top: 2px solid white;
+     padding: 20px;
+     transform: scale(0.9);
+}
+.fundo-imagembook{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50px;
+    height: 210px;
+    margin-top: -0px;
+    padding: 10px;
+}
+#ebookcampanhaladum,#ebookcampanha,#ebookcampanhaladdois{
+    width:250px;
+    height: 180px;
+    border-radius:20px ;
+    border: 2px solid white;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
+}
+#ebookcampanhaladum{
+    transform: rotate(-30deg) scale(1.0) translateX(40px) translateY(40px);
+}
+#ebookcampanhaladdois{
+    transform: rotate(30deg) scale(1.0) translateX(-40px) translateY(40px);
+}
+#ebookcampanha{
+    z-index: 2;
+    width: 250px;
+    height: 200px;
+}
+
+#ebookcampanha:hover{
+    border: 0;
+    border-radius:0 ;
+    transform:  scale(1.1);
+    transition: 0.6s ;
+    transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#ebookcampanhaladum:hover{
+    border: 0;
+    border-radius:0 ;
+    z-index: 3;
+    transform: rotate(0deg) scale(1.2) translateX(90px) translateY(0px);
+    transition-duration:0.6s;
+    transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+#ebookcampanhaladdois:hover{
+    border: 0;
+    border-radius:0 ;
+    z-index: 3;
+    transform: rotate(0deg) scale(1.2) translateX(-90px) translateY(0px);
+    transition: 0.6s;
+    transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.texto-campanhabook{
+    display: flex;
+    flex-wrap:wrap ;
+    width: 100%;
+    margin: 0;
+    height: 150px;
+    overflow: hidden;
+    padding: 10px;
+}
+#titulo-campanha{
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+#autor-campanha{
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    width: 90%;
+    margin-top:5px;
+}
+#preco-campanha{
+    font-size: 26px;
+    color: #FBB03B;
+    font-weight: bold;
+    margin-top:-10px;
+    width: 100%;
+
+}
+
+#btn-comprarcampanha{
+    background-color: #FBB03B;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: #0C212D;
+    width:80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transform: translateY(-35px);
+}
+#btn-comprarcampanha:hover{
+    background-color: #0C212D;
+    border: 2px solid #FBB03B;
+    color: #FBB03B;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.fundo-categoriabolha{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #031620;
+    padding-top: 40px;
+    transform: translateY(-250px);
+}
+#bloco-bolha{
+    display: flex;
+    flex-wrap: wrap;
+    width:150px;
+}
+#img-bolha{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+#img-bolha:hover{
+    transition: 2s ease-in-out;
+    transform: scale(1.2);
+}
+
+#link-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#texto-bolinha{
+    margin-top: -20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#texto-bolinha-religião{
+    margin-top: -0px;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.religiao-img{
+    margin-top: -80px;
+    padding: 10px;
+}
