@@ -243,6 +243,7 @@ main{
 .blocdesktwo{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     padding-top:10px ;
     border-bottom-left-radius: 30px;
@@ -253,7 +254,7 @@ main{
 
 .cont-sinopse{
     display: flex;
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;
     box-shadow:rgba(0, 0,0,0.24) 0px 4px 3px 0px;  
 
@@ -266,7 +267,7 @@ main{
     height: 20%;
     padding: 10px;
     padding-right:20px;
-    font-size: 20px;
+
     font-weight: bold;
     box-shadow:rgba(0, 0,0,0.24) 0px 4px 3px 0px;  
     margin-top: -0px;
@@ -281,21 +282,31 @@ main{
     text-wrap: wrap;
     word-break: break-all;
     padding: 10px;
-
+    font-size: 17px;
     margin: 0px;
 
 }
 
 
 
+.cont-imagensproduto{
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+}
+#imagensproduto-cont{
+    width: 342px;
+    box-shadow:rgba(0, 0,0,0.24) 0px 4px 3px 0px; 
+}
 
 
 
 
 
 .cont-descriçao{
-    width: 50%;
+    width: 20%;
     display: flex;
+    text-align: left;
     flex-wrap: wrap;
     box-shadow:rgba(0, 0,0,0.24) 0px 4px 3px 0px;  
 }
@@ -324,9 +335,9 @@ main{
 #dados-topicos{
     padding: 10px;
     width: 100%;
-    font-size: 20px;
-    color: #1c1c1c;
+    font-size: 16px;
     font-weight: bold;
+    color: #1c1c1c;
 }
 
 
@@ -343,7 +354,6 @@ section{
     color: black;
     box-shadow:rgba(0, 0,0,0.24) 0px 4px 3px 0px; 
     width:40% ;
-    background-color: #FBB03B;
 }
 
 
@@ -415,8 +425,7 @@ section{
 }
 .section-primeiro{
     display: flex;
-    background-color: #0C212D;
-    color: white;
+    color: black;
 }
 .fundo-categoria{
     display: flex;

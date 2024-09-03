@@ -104,6 +104,19 @@
         background-color: #0c212d;
     }
 
+    .cont-imagensproduto{
+        overflow-x:auto;
+        width: 100%;
+        z-index: 3;
+        background-color: red;
+        margin-top: 65px;
+        
+    }
+    #imagensproduto-cont{
+        width: 420px;
+    }
+
+
 }
 
 @media (max-width:570px){
