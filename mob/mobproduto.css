@@ -116,6 +116,13 @@
         width: 420px;
     }
 
+    .section-primeiro{
+        overflow: hidden;
+    }
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+
 
 }
 
