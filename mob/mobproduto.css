@@ -122,6 +122,9 @@
     .fundo-produtossolo{
         overflow-x: scroll;
     }
+    .fundo-categoriasolo{
+        overflow: hidden;
+    }
 
 
 }
@@ -138,6 +141,13 @@
         padding: 15px;  
         margin-left: 5px;
     }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
+    }
     
 }
 
@@ -152,6 +162,13 @@
         padding: 15px;  
         margin-left: 5px;
     }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
+    }
 }
 
 @media(max-width:440px){
@@ -164,6 +181,13 @@
         width: 180px;
         padding: 15px;  
         margin-left: 5px;
+    }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
     }
 }
 
@@ -178,6 +202,13 @@
         padding: 15px;  
         margin-left: 5px;
     }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
+    }
 }
 
 @media(max-width:420px){
@@ -190,6 +221,13 @@
         width: 160px;
         padding: 15px;  
         margin-left: 5px;
+    }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
     }
 }
 
@@ -284,6 +322,13 @@
     }
     #fim-categoria:hover{
         background-color: #0c212d;
+    }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
     }
 }
 
@@ -380,6 +425,13 @@
     }
     #fim-categoria:hover{
         background-color: #0c212d;
+    }
+
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
     }
 
 }

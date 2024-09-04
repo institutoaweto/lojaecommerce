@@ -130,5 +130,12 @@
         padding-right:8px;
     }
 
+    .fundo-produtossolo{
+        overflow-x: scroll;
+    }
+    .fundo-categoriasolo{
+        overflow: hidden;
+    }
+
     
 }
