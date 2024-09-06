@@ -92,6 +92,8 @@ voltarcampanha.addEventListener('click', function(){
     }());
 
 
+// ATIVAÇÃO DO PRODUTO CAMPANHA
+
 
 
 
