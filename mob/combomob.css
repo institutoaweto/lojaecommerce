@@ -117,3 +117,56 @@
     font-size: 18px;
     color: #FBB03B;
 }
+
+
+
+.cont-produtocigana{
+    width: 100%;
+    transform: translateX(-80px);
+}
+
+#part-imgumcigana{
+    transform: translateY(-150px) translateX(110px) rotate(-30deg);
+    height: 200px;
+}
+#part-imgcigana{
+    transform: translateY(-160px) translateX(92px);
+    height: 200px;
+}
+
+#part-imgdoiscigana{
+    transform: translateY(-140px) translateX(40px) rotate(30deg);
+    height: 200px;
+    z-index: 0;
+}
+
+#part-imgtrescigana{
+    transform: translateY(0px) translateX(-320px) rotate(-30deg);
+    height: 200px;
+}
+#part-imgquatrocigana{
+    transform: translateY(-0px) translateX(-340px);
+    height: 200px;
+    z-index: 3;
+}
+
+#part-imgcincocigana{
+    transform: translateY(-0px) translateX(-390px) rotate(30deg);
+    height: 200px;
+    z-index: 0;
+}
+
+
+.cont-produtoalimento{
+    width: 100%;
+    transform: translateX(-30px) translateY(10px);
+}
+
+#part-imgquatroalimento{
+    height: 200px;
+    transform: translateY(-90px) translateX(-80px) rotate(30deg);
+}
+#part-imgalimento{
+    height: 200px;
+    transform: translateY(-100px) translateX(60px) rotate(-30deg);
+}
