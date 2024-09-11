@@ -1,0 +1,46 @@
+// ATIVAÇÃO DO CARROSSEL
+var slideIndex = 0;
+
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "flex";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+ 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+ 
+function addcarro(){
+  const titulocarro = document.querySelector(".titulo-produto-carrinho");
+  const titulobloco = document.querySelector(".titulo-produto")
+  document.getElementById('titulo-produto-carrinho').innerHTML = 'titulobloco'
+}
+
+
+// ATIVAÇÃO DO CARROSSEL DE PRODUTOS
+const fundocampanha = document.querySelector('.seçao-blococampanhas');
+const cliquecampanha = document.querySelector('#setas-frente');
+const voltarcampanha = document.querySelector('#setas-volta');
+
+cliquecampanha.addEventListener('click', function(){
+    fundocampanha.classList.add('animação-voltar');  
+    document.getElementById('setas-volta').style.display = "flex";
+    document.getElementById('setas-frente').style.display = "none";
+})
+
+voltarcampanha.addEventListener('click', function(){
+    fundocampanha.classList.remove('animação-voltar');
+    document.getElementById('setas-frente').style.display = "flex";
+    document.getElementById('setas-volta').style.display = "none";
+})

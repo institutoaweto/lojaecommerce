@@ -25,11 +25,17 @@ header{
     left: 0;
     z-index: 2;
 }
+li{
+    list-style: none;
+}
 a{
+    display: flex;
     color: white;
     text-decoration: none;
 }
 
+
+/*// lOGOTIPO //*/
 .desk-logotipo{
     display: flex;
     padding: 2px;
@@ -44,62 +50,8 @@ a{
     height: 70px;
 }
 
-.desk-icones{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
-}
 
-#desk-icons{
-    font-size:28px;
-    cursor: pointer;
-    color: white;
-}
-#desk-icons:hover{
-    color: #FBB03B;
-    transform: scale(0.9);    
-}
-
-
-
-.desk-carrinho{
-    background-color: orange;
-}
-
-
-.fundo-users{
-    display: flex;
-
-    width: 100%;
-
-    align-items: center;
-}
-
-
-
-.desk-nav{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    background-color: #FBB03B;
-    padding: 10px;
-    font-weight: bold;
-    position:absolute;
-    top: 100px;
-}
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-#menu-nav{
-    font-size: 16px;
-    color: #031620;
-}
-
-
-
+/*// INPUT PESQUISA //*/
 .desk-pesquisa{
     display: flex;
     justify-content: center;
@@ -127,20 +79,90 @@ nav{
     border: 0px;
     outline: none;
 }
+#deskinput-pesquisa::placeholder{
+    color: #031620;
+}
 #icone-pesquisadesk,#icone-fecharpesquisadesk{
     color: #031620;
-
 }
 #icone-fecharpesquisadesk{
     display: none;
 }
-#deskinput-pesquisa::placeholder{
+
+
+/*// ICONES DO CABEÇALHO //*/
+.desk-icones{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+#desk-icons{
+    font-size:28px;
+    cursor: pointer;
+    color: white;
+}
+#desk-icons:hover{
+    color: #FBB03B;
+    transform: scale(0.9);    
+}
+
+
+/*// MENU DE NAVEGAÇÃO //*/
+.desk-nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #FBB03B;
+    padding: 10px;
+    font-weight: bold;
+    position:absolute;
+    top: 100px;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#menu-nav{
+    font-size: 16px;
     color: #031620;
 }
 
 
 
 
+
+
+
+.desk-carrinho{
+    background-color: orange;
+}
+
+
+.fundo-users{
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*// LUPA DESKTOP //*/
 .config-blocopesquisadesk{
     display: none;
     justify-content: center;
@@ -164,13 +186,7 @@ nav{
     transform: translateX(299px) translateY(55px);
     overflow-y: scroll;
 }
-li{
-    list-style: none;
-}
 
-a{
-    display: flex;
-}
 
 .li-pesquisadesk{
     display: flex;
@@ -180,6 +196,8 @@ a{
     margin: 0;
     transform: translateX(-20px);
 }
+
+
 .fundo-imgpesquisadesk{
     padding: 10px;
     width: 40%;
@@ -188,6 +206,8 @@ a{
     width: 100%;
     height: 120px;
 }
+
+
 .fundo-textopesquisadesk{
     display: flex;
     justify-content: space-evenly;
