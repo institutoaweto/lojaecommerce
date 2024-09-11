@@ -159,7 +159,9 @@
 
 .cont-produtoalimento{
     width: 100%;
-    transform: translateX(-30px) translateY(10px);
+    margin: 0px;
+    height: 200px;
+    transform: scale(0.9) translateX(-50px) translateY(10px);
 }
 
 #part-imgquatroalimento{
