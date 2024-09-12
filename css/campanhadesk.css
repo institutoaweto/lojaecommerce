@@ -1,9 +1,52 @@
 .campanhadesk{
-    display: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 400px;
+    height: 450px;
     margin-top: 40px;
+    background-color: #031620;
 }
+.desk-vantagens{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#text-vantagens{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    background-color: #fbb03b;
+    font-weight: 600;
+    height: 30%;
+    padding: 10px;
+}
+.desk-textovantagens{
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#text-vantagensbloco{
+    padding: 10px;
+    border-right: 2px solid #fbb03b;
+    font-size: 18px;
+    width: 40%;
+    height: 80%;
+    color: rgba(255, 255, 255, 0.773);
+    text-align: justify;
+    word-break: keep-all;
+    line-height: 30px;
+}
+
+b{
+    color: #fbb13bc0;
+}
+
 
 #titulo-produtopro{
     font-size: 16px;

@@ -1,0 +1,58 @@
+.campanhadesk{
+    
+}
+
+.desk-vantagens{
+    width: 80%;
+    height: 15%;
+}
+#text-vantagens{
+    text-align: center;
+    font-size: 22px;
+    width: 80%;
+    height: 75%;
+}
+
+.desk-textovantagens{
+    display: flex;
+    overflow-x:scroll;
+    justify-content: left;
+    width: 100%;
+    padding: 10px;
+}
+
+#text-vantagensbloco{
+    display: flex;
+    justify-content: left;
+    min-width: 100%;
+    padding: 10px;
+}
+
+#vantagens-arrasta{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+#seta-right{
+    margin-left: 20px;
+    animation: right 2s ease-in-out;
+    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-fill-mode:both;
+    animation-iteration-count: infinite;
+}
+@keyframes right {
+    50%{
+        transform: translateX(20px);
+    }
+    75%{
+        color: #fbb03b;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
