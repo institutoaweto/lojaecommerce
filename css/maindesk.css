@@ -7,7 +7,7 @@ main{
 display: flex;
 flex-wrap: wrap;
 width: 100%;
-margin-top: 130px;
+margin-top: 135px;
 }
      
 
@@ -26,15 +26,40 @@ margin-top: 130px;
 
 #img-slideshow{
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 
 #img-slideshowmob{
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 
 
+.fundo-promoçao{
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    margin-top: -300px;
+}
+
+#bloco-promoçao{
+    height: 200px;
+    width: 450px;
+    background-color: #0C212D;
+    border-radius: 40px;
+}
+
+#bloco-promoçao:hover{
+    transform: scale(0.9);
+    border-radius: 0;
+
+}
+
+/*//////// COMBO DE PRODUTOS //////// */
 
 
 
@@ -50,53 +75,46 @@ margin-top: 130px;
     justify-content: center;
     overflow:hidden;
     margin: -0px;
-    background-color:#031620;
     padding: 10px;
     width: 100%;
-    transform: translateY(-200px);
-}
+    transform: translateY(-120px);
 
+}
 .menu-blococampanhas{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    border-bottom: 2px solid #FBB03B;
+    border-bottom: 2px solid #0794D3;
     padding: 1rem;
 }
-
 #texto-menucampanhas{
     font-size: 20px;
-    color: white;
+    color: #0794D3;
+    font-weight: bold;
 }
-
 .passe{
     display: flex;
     font-size: 40px;
-    color: white;
+    color: #0794D3;
 }
-
 #setas-volta{
     margin-left: -60px;
     display: none;
 }
-
 #setas-volta,
 #setas-frente{
     cursor: pointer;
 }
-
 #setas-volta:hover,
 #setas-frente:hover{
-    color: #FBB03B;
+    color: #031620;
 }
-
 .seçao-blococampanhas{
     display: flex;
     justify-items:left;  
  transform: translateX(-610px);
 }
-
 .animação-voltar{
     display: flex;
     animation: ir 2s ease-in-out;
@@ -106,13 +124,11 @@ margin-top: 130px;
 .animação-voltarout{
     animation: voltar 2s ease-in-out;
 }
-
 @keyframes ir {
     100%{
         transform: translateX(630px);
     }
 }
-
 @keyframes voltar {
     100%{
     transform: translateX(-700px);
@@ -134,7 +150,7 @@ margin-top: 130px;
     width: 200px;
     height: 300px;
     padding: 25px;
-    color: white;
+    color: #0C212D;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
  }
 #titulo-produtocampanhas{
@@ -148,6 +164,7 @@ margin-top: 130px;
     font-weight: bold;
     padding: 5px;
     margin-top: 15px;
+    color: black;
 }
  #autor-produtocampanhas{
     display: flex;
@@ -161,7 +178,6 @@ margin-top: 130px;
     font-size: 11px;
     margin-top: -0px;
  }
-
  #preço-produtocampanhas{
     display: flex;
     justify-content: center;
@@ -206,14 +222,14 @@ span{
     color: white;
     margin: 0 auto;
     text-align: center;
-    background-color: #031620;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
-    transform: translateY(-200px);
+    transform: translateY(-60px);
 }
 
 .texto-relogio{
@@ -223,7 +239,7 @@ span{
     align-items: center;
     font-size: 20px;
     padding: 10px;
-    color: white;
+    color: #0C212D;
     font-weight: bold;
 }
 
@@ -235,19 +251,20 @@ span{
 
 #lista-contagem{
     display: inline-block;
-    font-size:14px;
+    font-size:8px;
     list-style-type: none;
     padding: 1em;
     margin-left: 10px;
     text-transform: uppercase;
-    background-color: #0794D3;
-    color: white;
+    background-color: #FBB03B;
+    color:#0C212D;
     transform: translateX(-20px);
+    transition: 0.2s;
 }
 
 #lista-contagem:hover{
-    background-color: #FBB03B;
-    color: black;
+    background-color: #0794D3;
+    color: white;
 }
 
 #days,#hours,#minutes{
@@ -270,56 +287,41 @@ li span {
     font-size: calc(3.375rem * var(--smaller));
 }
 
+#campanhaseçaoleft,#campanhaseçaoright{
+    color: #0794D3;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#campanhaseçaoleft:hover,
+#campanhaseçaoright:hover{
+    color: #FBB03B;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*////////////// PRODUTO CAMPANHA ///////*/
+/*////////////// COMBO CAMPANHA ///////*/
 .fundo-campanha{
     display: flex;
     align-items: center;
     flex-direction: row;
-    transform: translateY(-200px);
-    background-color:#031620;
+    transform: translateY(-60px);
+    background-color:white;
     overflow-x: hidden;
 }
 .animaçao-campanhafrente{
     animation: setair 2s ease-in-out;
     animation-fill-mode:both;
 }
-
 @keyframes setair {
     100%{
         margin-left: -1550px;
     }
 }
-
 .animaçao-campanhaatras{
     animation: atras 2s ease-in-out;
     animation-fill-mode: both;
 }
-
 @keyframes atras {
     100%{
         margin-left:0px;
@@ -333,32 +335,25 @@ li span {
     padding: 10px;
 }
 
-#campanhaseçaoleft,#campanhaseçaoright{
-    color: #0794D3;
-    font-size: 40px;
-    cursor: pointer;
-}
 
-#campanhaseçaoleft:hover,
-#campanhaseçaoright:hover{
-    color: #FBB03B;
-}
 
 .bloco-campanha{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-     min-width: 350px;
-     height: 460px;
-     padding: 10px;
-     border-radius: 40px;
-     border-bottom: 2px solid white;
-     border-top: 2px solid white;
-     padding: 20px;
-     transform: scale(0.9);
-     margin-left: 80px;
+    min-width: 350px;
+    height: 460px;
+    padding: 10px;
+    border-radius: 40px;
+    border-bottom: 2px solid #FBB03B;
+    border-top: 2px solid #FBB03B;
+    padding: 20px;
+    transform: scale(0.9) translateY(-30px);
+    margin-left: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .fundo-imagembook{
     display: flex;
     justify-content:center;
@@ -368,8 +363,6 @@ li span {
     margin-top: -0px;
     padding: 10px;
 }
-
-
 #ebookcampanhaladum{
     min-width: 140px;
     height: 195px;
@@ -394,7 +387,6 @@ li span {
     border: 2px solid white;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
 }
-
 #ebookcampanha:hover{
     border: 0;
     border-radius:0 ;
@@ -410,8 +402,6 @@ li span {
     transition-duration:0.6s;
     transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-
 #ebookcampanhaladdois:hover{
     border: 0;
     border-radius:0 ;
@@ -420,11 +410,6 @@ li span {
     transition: 0.6s;
     transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-
-
-
-
 
 
 .fundo-imagembookcigana{
@@ -447,21 +432,17 @@ li span {
 #ebookcampanhaladumcigana{
     transform: rotate(-30deg) scale(1.0) translateX(40px) translateY(40px);
 }
-
-
 #ebookcampanhacigana{
     z-index: 2;
     width: 250px;
     height: 200px;  
 }
-
 #ebookcampanhaladdoiscigana{
     z-index: 2;
     width: 250px;
     height: 200px;
     transform: translateX(-40px);  
 }
-
 #ebookcampanhaladdotrescigana{
     z-index: 1;
     width: 250px;
@@ -556,46 +537,58 @@ li span {
 
 
 .texto-campanhabook{
-    display: flex;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     flex-wrap:wrap ;
     width: 100%;
     margin: 0;
     height: 100px;
     padding: 10px;
+    color: black;
+    margin-top: 40px;
 }
 #titulo-campanha{
     font-size: 20px;
-    color: white;
+    color: black;
     width: 100%;
     margin: 0;
 }
 #autor-campanha{
-    font-size: 14px;
-    color: white;
+    font-size: 16px;
+    color: black;
     font-weight: bold;
     width: 90%;
-    margin-top:5px;
+    margin: 0;
+}
+#preco-campanha{
+    font-size: 26px;
+    color: #0794D3;
+    font-weight: bold;
+    margin: 0;
+    width: 40%;
 }
 
+
+
+
+
 .fundo-campanhafinal{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-5px);
+}
+.fundo-comprarcampanha{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.fundo-comprarcampanha{
-    width: 40%;
-    margin-left: -154px;
-}
 
 
-#preco-campanha{
-    font-size: 26px;
-    color: #FBB03B;
-    font-weight: bold;
-    margin-top:-10px;
-    width: 100%;
-}
+
 
 #btn-comprarcampanha{
     background-color: #FBB03B;
@@ -607,8 +600,8 @@ li span {
     align-items: center;
     justify-content: center;
     display: flex;
-    transform: translateY(-35px);
     font-size: 20px;
+    transform: translateY(-40px);
 }
 #btn-comprarcampanha:hover{
     background-color: #0C212D;
@@ -635,66 +628,4 @@ li span {
 
 
 /*////////////// CAMPANHA ///////*/
-
-.fundo-categoriabolha{
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #031620;
-    padding-top: 40px;
-    margin-top: -250px;
-}
-#bloco-bolha{
-    display: flex;
-    flex-wrap: wrap;
-    width:150px;
-}
-#img-bolha{
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
-}
-
-#img-bolha:hover{
-    transition: 2s ease-in-out;
-    transform: scale(1.2);
-}
-
-#link-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-#texto-bolinha{
-    margin-top: -20px;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-}
-
-#texto-bolinha-religião{
-    margin-top: -0px;
-    font-size: 23px;
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-.religiao-img{
-    margin-top: -80px;
-    padding: 10px;
-}
-
-
-
-
-
-
 

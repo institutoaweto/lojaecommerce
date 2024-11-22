@@ -7,7 +7,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;   
-    margin-top: 0px;
+    margin-top: -0px;
+    transform: translateY(-100px);
 }
 a{
     color: black;
@@ -99,9 +100,12 @@ font-size: 20px;
     padding: 0px;
     width: 100%;
 }
+
+
 #titulo-produto{
-    font-size: 16px;
+    font-size: 17px;
     font-weight:400;
+
 }
 #autor-produto{
     display: flex;
@@ -192,20 +196,13 @@ font-size: 20px;
 }
 
 
-
-
-
-
-
-
-
 .fim-categoria{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 40px;
 }
 #fim-categoria{
     display: flex;

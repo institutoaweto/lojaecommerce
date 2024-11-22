@@ -1,5 +1,5 @@
 .config-pesquisamob,.mob-menu,.mob-pesquisa,#img-logotipomob,
-.config-menumob,.config-blocopesquisamob{
+.config-menumob,.config-blocopesquisamob,.mob-login{
     display: none;
 }
 body{
@@ -13,8 +13,7 @@ body{
 header{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: center;                        
     position:fixed;
     width: 100%;
     background-color:#031620;
@@ -38,9 +37,10 @@ a{
 /*// lOGOTIPO //*/
 .desk-logotipo{
     display: flex;
-    padding: 2px;
+    padding: 8px;
     justify-content: center;
     align-items: center;
+    margin-left: 40px;
 }
 .desk-logotipo:hover{
     transform: scale(0.9);    
@@ -53,27 +53,34 @@ a{
 
 /*// INPUT PESQUISA //*/
 .desk-pesquisa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 40%;
+    display: flex;  
+    flex-direction: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 40px;
+    top: 0;
     background-color: white;
-}
-.pesquisa-desk{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;    
     border: 5px solid #FBB03B;
+}
+
+
+.pesquisa-desk{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    width: 34%;
+    height: 40px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #deskinput-pesquisa{
     width: 90%;
     height: 100%;
     border: 0px;
-    font-size: 18px;
-    border: 0px;
+    font-size: 17px;
+    border: 0px;    
 }
 #deskinput-pesquisa:focus{
     border: 0px;
@@ -84,10 +91,157 @@ a{
 }
 #icone-pesquisadesk,#icone-fecharpesquisadesk{
     color: #031620;
+    cursor: pointer;
+    
+
+
 }
 #icone-fecharpesquisadesk{
     display: none;
+
 }
+
+
+.fundo-inforlupa{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    color: #0C212D;
+}
+#lupa-inforlupa{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 50px;
+    width: 100%;
+    height: 50%;
+    margin-top: -10px;
+}
+#titulo-inforlupa{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+}
+.ativar-fundoinforlupa{
+    display: block;
+}
+
+
+
+
+
+
+
+
+.desk-pesquisaativar{
+    display: flex;
+    z-index: 5;    
+    height: 400px;
+    overflow-y: scroll;
+    margin: 0;
+    position: relative;
+    top: 180px;
+    transition: 2s;
+}
+
+.test-fundoitems{
+    display: flex;
+    width: 100%;
+    background-color: blue;
+    position: relative;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    z-index: 6;
+}
+
+
+
+
+
+/*// LUPA DESKTOP //*/
+.config-blocopesquisadesk{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 400px;
+    overflow-y: visible; 
+    margin-top: 60px;
+}
+.ativarconfig-blocopesquisadesk{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 400px;
+    overflow-y: visible; 
+}
+
+
+.li-pesquisadesk{
+    display: flex;
+    width: 100%;
+    height:140px;
+    border-bottom:3px solid black;
+    margin: 0;
+    transform: translateX(-20px);
+}
+
+
+.fundo-imgpesquisadesk{
+    padding: 10px;
+    width: 40%;
+}
+#img-inputdesk{
+    width: 100%;
+    height: 120px;
+}
+
+
+.fundo-textopesquisadesk{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -0px;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #031620;
+    font-weight: bold;
+}
+#titulo-inputdesk{
+    width: 100%;
+    font-size: 16px;
+}
+#autor-inputdesk{
+    width: 100%;
+    font-size: 14px;
+    transform: translateY(-10px);
+}
+#preco-inputdesk{
+    width: 70%;
+    font-size: 25px;
+    transform: translateY(-25px) translateX(-10px); 
+}
+#btn-pesquisacomprardesk{
+    background-color: #FBB03B;
+    padding: 9px;
+    border-radius: 20px;
+    font-weight: bold;
+    height: 10%;
+    color: #031620;
+    transform: translateY(-20px);
+}
+
+
+
+
+
+
 
 
 /*// ICONES DO CABEÇALHO //*/
@@ -96,16 +250,73 @@ a{
     justify-content: space-evenly;
     align-items: center;
     width: 20%;
+
+    margin-left:55px;
+}
+
+#fundo-desk-icones{
+    background-color: #0C212D;
+    padding: 10px;
+    border-radius: 50px;
 }
 #desk-icons{
     font-size:28px;
     cursor: pointer;
     color: white;
+    transition: 0.2s;
 }
 #desk-icons:hover{
     color: #FBB03B;
     transform: scale(0.9);    
 }
+
+/*// ICONES DO CABEÇALHO //*/
+
+.desk-login{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15%;
+
+}
+
+
+
+#link-login{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    align-items: center;
+    color: white;
+    transition: 0.2s;
+
+}
+#link-login:hover{
+    color: #FBB03B;
+    transform: scale(0.9);    
+}
+
+#icone-login{
+    font-size:28px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    background-color: #0C212D;
+    padding: 10px;
+    border-radius: 50px;
+
+}
+
+#cadastrese-desk{
+    margin-left: -20px;
+}
+
+
+
+
+
+
+
 
 
 /*// MENU DE NAVEGAÇÃO //*/
@@ -162,82 +373,5 @@ nav{
 
 
 
-/*// LUPA DESKTOP //*/
-.config-blocopesquisadesk{
-    display: none;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color:white;
-    border: 5px solid #FBB03B;
-    width: 39.2%;
-    z-index: 2;
-    position: fixed;
-}
-.ativarconfig-blocopesquisadesk{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color:white;
-    border: 5px solid #FBB03B;
-    width: 36.1%;
-    height: 400px;
-    z-index: 2;
-    position: fixed;
-    transform: translateX(299px) translateY(55px);
-    overflow-y: scroll;
-}
 
-
-.li-pesquisadesk{
-    display: flex;
-    width: 100%;
-    height:140px;
-    border-bottom:3px solid black;
-    margin: 0;
-    transform: translateX(-20px);
-}
-
-
-.fundo-imgpesquisadesk{
-    padding: 10px;
-    width: 40%;
-}
-#img-inputdesk{
-    width: 100%;
-    height: 120px;
-}
-
-
-.fundo-textopesquisadesk{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: -0px;
-    flex-wrap: wrap;
-    width: 100%;
-    color: #031620;
-    font-weight: bold;
-}
-#titulo-inputdesk{
-    width: 100%;
-    font-size: 16px;
-}
-#autor-inputdesk{
-    width: 100%;
-    font-size: 14px;
-    transform: translateY(-10px);
-}
-#preco-inputdesk{
-    width: 70%;
-    font-size: 25px;
-    transform: translateY(-25px) translateX(-10px); 
-}
-#btn-pesquisacomprardesk{
-    background-color: #FBB03B;
-    padding: 9px;
-    border-radius: 20px;
-    font-weight: bold;
-    height: 10%;
-    color: #031620;
-    transform: translateY(-20px);
-}
 

@@ -69,27 +69,6 @@ main{
 
 
 
-#fundo-categoriabolhamob,.fundo-categoriabolha{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    width: 100%;
-    padding-top: 0px;
-    transform: translateY(-100px);
-}
-#fundo-categoriabolhamob{
-    transform: translateY(35px);
-    background-color: #0C212D;
-}
-#bloco-bolha{
-    width: 250px;
-    margin-left: 50px;
-}
-
-.religiao-img{
-    margin-top: -30px;
-}
-
 #fundo-carrossel{
     height: 700px;
 

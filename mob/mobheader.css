@@ -1,5 +1,5 @@
 
-.desk-pesquisa,.desk-nav,#img-logotipodesk,.desk-icones{
+.desk-pesquisa,.desk-nav,#img-logotipodesk,.desk-icones,.desk-login{
     display: none;
 }
 .mob-menu,.mob-pesquisa,#img-logotipomob{
@@ -9,9 +9,12 @@ header{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
+
+/*// MENU MOBILE //*/
 .config-menumob{
     display: none;
     flex-wrap: wrap;
@@ -58,82 +61,86 @@ header{
 }
 
 
-/*
-// LUPA GERAL
-*/
+/*// lOGOTIPO //*/
+.desk-logotipo{
+    margin: 0;
+}
 
-.mob-pesquisa, .mob-menu{
-    font-size: 30px;
-}
-.config-pesquisamob{
-    display:none;
-}
-.ativar-pesquisamob{
+
+
+/* LUPA GERAL */
+.mob-login, .mob-menu{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
+}
+#icone-loginmob{
+    font-size: 37px;
+}
+
+
+/* PESQUISA MOB */
+.config-pesquisamob{
+    display: flex;  
+    flex-direction: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 40%;
-    background-color: white;
-    padding: 10px;
-    transform: translateX(-10px) translateY(15px);
+    height: 40px;
+    top: 0;
     border: 5px solid #FBB03B;
+    margin: 0;
+    transform: translateX(-10px);
+
 }
 .pesquisa-mob{
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;    
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    margin: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #mobinput-pesquisa{
-    width: 100%;
-    height: 100%;
+    width: 80%;
     border: 0px;
     font-size: 25px;
     border: 0px;
-    padding: 10px;
 }
 #mobinput-pesquisa:focus{
     outline:none;
     border: 0;
 }
-#icone-fecharpesquisaamob{
+#icone-fazerpesquisaamob{
     color: #FBB03B;
     font-size: 30px;
+    margin-left: 9px;
+    
+}
+#icone-fecharpesquisaamob{
+    display: none;
+    color: #FBB03B;
+    font-size: 30px;
+    margin-left: 9px;
+    
 }
 
 
 
-/*
-// LUPA CONFIGURAÇÃO
-*/
-
-.ativarbloco{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color:white;
-    border: 5px solid #FBB03B;
-    width: 100%;
-    z-index: 2;
-    position: fixed;
-    overflow-y: scroll;
-    overflow: scroll;
-    transform: translateX(-30px);
-}
+/* LUPA CONFIGURAÇÃO */
 
 .config-blocopesquisamob{
     display: none;
     justify-content: center;
     flex-wrap: wrap;
     background-color:white;
-    border: 5px solid #FBB03B;
     width: 100%;
     z-index: 2;
-    position: fixed;
-    overflow: scroll;
-    transform: translateX(-30px) translateY(170px);
+    margin-top: 60px ;
 }
 
 

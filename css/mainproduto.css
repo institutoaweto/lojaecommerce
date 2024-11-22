@@ -359,13 +359,6 @@ section{
     background-color: orange;
 }
 
-.section-primeiro{
-    display: flex;
-    justify-content: left;
-    position: relative;
-    width: 100%;
-    overflow-x:hidden;
-}
 
 
 

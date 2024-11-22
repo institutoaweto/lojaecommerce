@@ -1,8 +1,30 @@
-// ATIVAÇÃO DA LUPA
-const fundopesquisa = document.querySelector('.config-blocopesquisadesk');
-const cliquepesquisa = document.querySelector('#deskinput-pesquisa');
-const fecharpesquisa = document.querySelector('#icone-fecharpesquisadesk');
+const fundotestpesquisa = document.querySelector('.desk-pesquisa');
+const cliquetestpesquisa = document.querySelector('#deskinput-pesquisa');
+const fecharbarrapesquisa = document.querySelector('#icone-fecharpesquisadesk');
 
+
+cliquetestpesquisa.addEventListener('click', function(){
+    fundotestpesquisa.classList.add('desk-pesquisaativar')
+    document.getElementById('icone-pesquisadesk').style.display = "none";
+    document.getElementById('icone-fecharpesquisadesk').style.display = "flex";
+    document.querySelector('.config-blocopesquisadesk').style.display = "flex";
+});
+
+fecharbarrapesquisa.addEventListener('click', function(){
+    fundotestpesquisa.classList.remove('desk-pesquisaativar');
+    document.getElementById('icone-pesquisadesk').style.display = "flex";
+    document.getElementById('icone-fecharpesquisadesk').style.display = "none";
+    document.querySelector('.config-blocopesquisadesk').style.display = "none";
+})
+
+
+
+
+
+// ATIVAÇÃO DA LUPA
+
+
+/*
 cliquepesquisa.addEventListener('input', function(){
     fundopesquisa.classList.add('ativarconfig-blocopesquisadesk');
     document.getElementById('icone-pesquisadesk').style.display = "none";
@@ -13,7 +35,7 @@ cliquepesquisa.addEventListener('input', function(){
     document.getElementById('icone-pesquisadesk').style.display = "flex";
     document.getElementById('icone-fecharpesquisadesk').style.display = "none";
  })
-
+*/
 
 // ATIVAÇÃO DA PESQUISA DA LUPA
  const pesquisainputmobum = document.getElementById('deskinput-pesquisa');//Barra de Pesquis

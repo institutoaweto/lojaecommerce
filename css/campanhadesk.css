@@ -6,6 +6,7 @@
     height: 450px;
     margin-top: 40px;
     background-color: #031620;
+    transform: translateY(-100px);
 }
 .desk-vantagens{
     display: flex;
@@ -51,7 +52,6 @@ b{
 #titulo-produtopro{
     font-size: 16px;
     font-weight:400;
-    color: white;
 }
 #ligarpro{
     color: #0794d3;

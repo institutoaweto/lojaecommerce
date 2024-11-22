@@ -13,30 +13,20 @@ fecharmenumob.addEventListener('click', function(){
 
 
 
-//SISTEMA LUPA UM
-const fundolupamob = document.querySelector('.config-pesquisamob');
-const cliqueluapamob = document.querySelector('#icone-pesquisamob');
-const fecharlupamob = document.querySelector('#icone-fecharpesquisaamob');
-
-cliqueluapamob.addEventListener('click', function(){
-    fundolupamob.classList.add('ativar-pesquisamob')
-});
-
-fecharlupamob.addEventListener('click',function(){
-    fundolupamob.classList.remove('ativar-pesquisamob')
-});
-
-
 //SISTEMA LUPA DOIS
 const mobfundolupa = document.querySelector('.config-blocopesquisamob');
 const digitarlupa = document.querySelector('#mobinput-pesquisa');
 
 digitarlupa.addEventListener('input', function(){
     mobfundolupa.classList.add('ativar')
+    document.getElementById('icone-fazerpesquisamob').style.display = "flex"
+    document.getElementById('icone-fecharpesquisamob').style.display = "none"
 })
 
 fecharlupamob.addEventListener('click',function(){
     mobfundolupa.classList.remove('ativar')
+    document.getElementById('icone-fazerpesquisamob').style.display = "none"
+    document.getElementById('icone-fecharpesquisamob').style.display = "flex"
 });
 
 

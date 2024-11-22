@@ -282,21 +282,7 @@ main{
     color: #FBB03B;
 }
 
-.bloco-campanha{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-     width: 280px;
-     height: 460px;
-     padding: 10px;
-     border-radius: 40px;
-     border-bottom: 2px solid white;
-     border-top: 2px solid white;
-     padding: 20px;
-     transform: scale(0.9);
-     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(250, 246, 246, 0.08) 0px 1px 0px inset;
-}
+
 
 .fundo-imagembook{
     display: flex;
@@ -490,6 +476,7 @@ main{
     margin: 0;
     height: 100px;
     padding: 10px;
+    color: black;
 }
 #titulo-campanha{
     font-size: 20px;
@@ -875,20 +862,7 @@ li{
 
 /*//////// CARROSSEL DE PRODUTOS //////// */
 
-.fundo-produtoscampanhas{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    overflow:hidden;
-    margin: -0px;
-    background-color:#031620;
-    padding: 10px;
-    width: 100%;
-    transform: translateY(-200px);
-}
+
 
 .menu-blococampanhas{
     display: flex;
@@ -1000,13 +974,7 @@ section{
     background-color: orange;
 }
 
-.section-primeiro{
-    display: flex;
-    justify-content: left;
-    position: relative;
-    width: 100%;
-    overflow-x:hidden;
-}
+
 
 
 
