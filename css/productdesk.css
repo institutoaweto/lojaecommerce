@@ -8,7 +8,7 @@ body{
     justify-content: center;
     width: 100%;   
     margin-top: -0px;
-    transform: translateY(-100px);
+    transform: translateY(-0px);
 }
 a{
     color: black;
@@ -30,7 +30,6 @@ a{
 }
 #texto-categoria{
 font-weight: bold;
-color: #0794d3;
 font-size: 20px;
 
 }
@@ -45,9 +44,11 @@ font-size: 20px;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+
     align-items: center;
     justify-content: center;
     margin: -0px;
+
 }
 
 

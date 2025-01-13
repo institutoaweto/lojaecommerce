@@ -24,6 +24,7 @@ main{
     transform: scale(0.9) translateX(-40px);
     background-color: transparent;
     margin: 0px;
+    color: white;
     background-color: #0792d380;
 }
 #days,#hours,#minutes{
@@ -33,11 +34,13 @@ main{
     display: flex;
     width: 100%;
    transform: translateX(-10px);
+   color: white;
 }
 
 .fundo-contagemmob{
     display: flex;
     background-color: #0C212D;
+    color: white;
     transform: scale(1.2) translateX(20px);
 }
 
@@ -131,22 +134,27 @@ main{
         width: 100%;
         align-items: center;
         justify-content: center;
+        transform: translateY(-40px);
+
     }
     .fundo-relogio{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
     .fundo-contagemmob{
         display: flex;
         transform: scale(1.1) translateX(15px);
+        
     }    
     #fundo-campanhamob{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         background-color: #0C212D;
+
     }
     #bloco-campanhamob{
         display: flex;
